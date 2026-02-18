@@ -1,0 +1,130 @@
+[
+  {
+    "id": "deck_biz_english_b2",
+    "type": "LANGUAGE",
+    "version": 1,
+    "is_official": true,
+    "config": {
+      "allows_markdown": false,
+      "source_iso": "en-US",
+      "target_iso": "es-MX"
+    },
+    "metadata": {
+      "title": "Business English B2",
+      "description": "Vocabulario esencial para reuniones, correos y gestión de proyectos internacionales.",
+      "author": "Wize Academy",
+      "tags": "english,soft-skills,business",
+      "accent_color": "#FF9800"
+    },
+    "cards": [
+      {
+        "id": "c_biz_1",
+        "type": "TEXT",
+        "front": "Stakeholder",
+        "back": "Parte interesada / Involucrado clave",
+        "hint": "Anyone interested in the project outcome."
+      },
+      {
+        "id": "c_biz_2",
+        "type": "TEXT",
+        "front": "To touch base",
+        "back": "Contactar brevemente / Ponerse al día",
+        "hint": "Idiom: 'Let's ____ ____ next week'."
+      },
+      {
+        "id": "c_biz_3",
+        "type": "TEXT",
+        "front": "Meeting Minutes",
+        "back": "Minuta / Actas de reunión",
+        "hint": "The written record of what was said."
+      },
+      {
+        "id": "c_biz_4",
+        "type": "TEXT",
+        "front": "Bottleneck",
+        "back": "Cuello de botella",
+        "hint": "A point of congestion that slows things down."
+      },
+      {
+        "id": "c_biz_5",
+        "type": "TEXT",
+        "front": "Deadline vs Timeline",
+        "back": "Deadline: Fecha límite (entrega).\nTimeline: Cronograma (línea de tiempo).",
+        "hint": "One is a date, the other is a plan."
+      }
+    ]
+  },
+  {
+    "id": "deck_flutter_adv",
+    "type": "TECH",
+    "version": 1,
+    "is_official": false,
+    "config": {
+      "allows_markdown": true,
+      "code_language": "dart"
+    },
+    "metadata": {
+      "title": "Advanced Flutter",
+      "description": "Preguntas técnicas para entrevistas Senior y arquitectura.",
+      "author": "Mobile Guild",
+      "tags": "dev,mobile,hard",
+      "accent_color": "#02569B"
+    },
+    "cards": [
+      {
+        "id": "c_fl_1",
+        "type": "CODE",
+        "front": "¿Diferencia entre `main()` y `runApp()`?",
+        "back": "**main()**: Punto de entrada de Dart.\n**runApp()**: Infla el widget raíz y lo adjunta a la pantalla.",
+        "hint": "Uno es Dart puro, el otro es Flutter framework."
+      },
+      {
+        "id": "c_fl_2",
+        "type": "CODE",
+        "front": "Explica el `BuildContext`",
+        "back": "Es una referencia a la **ubicación** de un Widget dentro del árbol de elementos (Element Tree).",
+        "hint": "Location, location, location."
+      },
+      {
+        "id": "c_fl_3",
+        "type": "CODE",
+        "front": "`setState` vs `Bloc`",
+        "back": "**setState**: Reconstruye el widget localmente (efímero).\n**Bloc**: Separa la lógica de negocio y maneja estados complejos fuera de la UI.",
+        "hint": "Local vs Architecture."
+      }
+    ]
+  },
+  {
+    "id": "deck_wize_onboarding",
+    "type": "COMPLIANCE",
+    "version": 1,
+    "is_official": true,
+    "config": {
+      "allows_markdown": false,
+      "code_language": null
+    },
+    "metadata": {
+      "title": "Wizeline Onboarding",
+      "description": "Conceptos clave sobre cultura, valores y seguridad de la información.",
+      "author": "People Team",
+      "tags": "culture,hr,essential",
+      "accent_color": "#E91E63"
+    },
+    "cards": [
+      {
+        "id": "c_culture_1",
+        "type": "TEXT",
+        "front": "¿Qué significa 'Ownership' aquí?",
+        "back": "Hacerte responsable de tus resultados y del impacto de tu trabajo en el cliente.",
+        "hint": "No es solo ser dueño de algo."
+      },
+      {
+        "id": "c_sec_1",
+        "type": "TEXT",
+        "front": "Política de Pantalla",
+        "back": "Siempre bloquear la computadora al levantarse (Win+L / Cmd+Ctrl+Q).",
+        "hint": "Seguridad básica en la oficina."
+      }
+    ]
+  }
+]
