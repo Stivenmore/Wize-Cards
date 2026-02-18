@@ -43,8 +43,8 @@ lib/
 
 ¡Gracias a estas personas maravillosas que han contribuido a este proyecto!
 
-<a href="https://github.com/tu-usuario/wize-cards/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tu-usuario/wize-cards" />
+<a href="https://github.com/Stivenmore/Wize-Cards/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=StivenMore/Wize-Cards" />
 </a>
 ---
 
