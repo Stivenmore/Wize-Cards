@@ -37,7 +37,8 @@ lib/
     ├── home/               # Dashboard y Listado de Mazos
     ├── decks/              # Detalle de Mazo y Estudio
     └── discover/           # Búsqueda y Descarga de contenido
-
+    
+```
 
 ## ✨ Contribuidores
 
