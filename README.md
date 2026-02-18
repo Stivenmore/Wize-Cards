@@ -37,7 +37,7 @@ lib/
     ├── home/               # Dashboard y Listado de Mazos
     ├── decks/              # Detalle de Mazo y Estudio
     └── discover/           # Búsqueda y Descarga de contenido
-    
+
 ```
 
 ## ✨ Contribuidores
@@ -47,6 +47,5 @@ lib/
 <a href="https://github.com/Stivenmore/Wize-Cards/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=StivenMore/Wize-Cards" />
 </a>
----
 
 Hecho con ❤️ por el equipo de **Wize Mobiles**.
