@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:flutter/widget_previews.dart';
 
 void main() => runApp(const MyApp());
 
@@ -20,3 +21,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/*
+// Preview Visualizator
+@Preview()
+Widget previewWizeCardsStarter() {
+  return Container(
+    color: Colors.white,
+    child: Center(child: Text('WizeCards Workshop Starter')),
+  );
+}
+*/
