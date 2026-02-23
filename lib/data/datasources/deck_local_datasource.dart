@@ -29,7 +29,6 @@ class DeckLocalDatasource {
 
       return jsonData.map((jsonItem) => DeckModel.fromJson(jsonItem)).toList();
     } catch (e) {
-      print(e);
       return [];
     }
   }
