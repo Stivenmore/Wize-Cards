@@ -21,9 +21,9 @@ dependencies:
   intl: ^0.18.0
 
   # Backend y Datos
-  firebase_core: ^2.24.0
-  firebase_auth: ^4.15.0
-  cloud_firestore: ^4.13.0
+  firebase_core: ^4.4.0
+  firebase_auth: ^6.1.4
+  cloud_firestore: ^6.1.2
   sqflite: ^2.3.0
   path: ^1.8.3
   
