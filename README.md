@@ -40,6 +40,11 @@ lib/
 
 ```
 
+## Figma Design
+
+[![Figma](https://www.figma.com/design/kEJfHMwSzGnX2V7WPlDCrT/Wize-Cards?node-id=0-1&t=BaJXRmCdcqD3zXmf-1)]()
+
+
 ## ✨ Contribuidores
 
 ¡Gracias a estas personas maravillosas que han contribuido a este proyecto!
