@@ -42,7 +42,7 @@ lib/
 
 ## Figma Design
 
-[![Figma](https://www.figma.com/design/kEJfHMwSzGnX2V7WPlDCrT/Wize-Cards?node-id=0-1&t=BaJXRmCdcqD3zXmf-1)]()
+[Ver diseño en Figma](https://www.figma.com/design/kEJfHMwSzGnX2V7WPlDCrT/Wize-Cards?node-id=0-1&t=BaJXRmCdcqD3zXmf-1)
 
 
 ## ✨ Contribuidores
