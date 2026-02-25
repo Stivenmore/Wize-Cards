@@ -57,7 +57,7 @@ Aqui encontraran lo que se busca trabajar por cada nivel, desde L1 hasta L4 y mu
 ¡Gracias a estas personas maravillosas que han contribuido a este proyecto!
 
 <a href="https://github.com/Stivenmore/Wize-Cards/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=StivenMore/Wize-Cards" />
+  <img src="https://contrib.rocks/image?repo=Stivenmore/Wize-Cards" />
 </a>
 
 Hecho con ❤️ por el equipo de **Wize Mobiles**.
