@@ -45,6 +45,13 @@ lib/
 [Ver diseño en Figma](https://www.figma.com/design/kEJfHMwSzGnX2V7WPlDCrT/Wize-Cards?node-id=0-1&t=BaJXRmCdcqD3zXmf-1)
 
 
+## Google Docs
+Aqui encontraran lo que se busca trabajar por cada nivel, desde L1 hasta L4 y mucho mas
+
+[Doc del proyecto](https://docs.google.com/document/d/1NOVatLP_jpIzdqdnGyzwWBCTyDsjzC07G4rNFxJTeTs/edit?usp=sharing)
+
+
+
 ## ✨ Contribuidores
 
 ¡Gracias a estas personas maravillosas que han contribuido a este proyecto!
