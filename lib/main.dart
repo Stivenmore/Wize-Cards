@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wize_cards/core/router/app_routes.dart';
+import 'package:wize_cards/core/router/route_generator.dart';
+import 'package:wize_cards/core/theme/app_theme.dart';
 //import 'package:flutter/widget_previews.dart';
 
 void main() => runApp(const MyApp());
@@ -11,13 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'WizeCards',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1976D2)),
-        useMaterial3: true,
-      ),
-      home: const Scaffold(
-        body: Center(child: Text('WizeCards Workshop Starter')),
-      ),
+      theme: AppTheme.lightTheme,
+      themeMode: .light,
+      initialRoute: AppRoutes.splash,
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 Widget previewWizeCardsStarter() {
   return Container(
     color: Colors.white,
-    child: Center(child: Text('WizeCards Workshop Starter')),
+    child: Center(child: Text('WizeCards Workshop Starter Now')),
   );
 }
 */
