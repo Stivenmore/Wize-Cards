@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wize_cards/core/utils/constant.dart';
 
 class AppTheme {
-  static const primaryColor = Color(0xFF1976D2); // Wize Blue
+  static const primaryColor = Color(0xFF1152D4); // Wize Blue
   static const scaffoldBackground = Color(0xFFF5F7FA); // Light Grey
   static const cardBackground = Colors.white; // White for cards
 
@@ -15,12 +16,23 @@ class AppTheme {
         seedColor: primaryColor,
         onSurface: scaffoldBackground,
       ),
+      shadowColor: primaryColor.withValues(alpha: 0.3),
       // Tipografía global lista
       textTheme: TextTheme(
         headlineMedium: GoogleFonts.inter(
           fontSize: 24,
           fontWeight: FontWeight.bold,
           color: Colors.black87,
+        ),
+        headlineSmall: GoogleFonts.inter(
+          fontSize: 40,
+          fontWeight: FontWeight.w800,
+          color: primaryColor,
+        ),
+        labelSmall: GoogleFonts.inter(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.subtitle,
         ),
         bodyMedium: GoogleFonts.inter(fontSize: 16, color: Colors.black54),
         labelLarge: GoogleFonts.inter(
@@ -29,7 +41,6 @@ class AppTheme {
           color: Colors.white,
         ),
       ),
-
       // Estilo de tarjetas por defecto (Sombra suave)
       cardTheme: CardThemeData(
         elevation: 0,
