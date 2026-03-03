@@ -1,8 +1,11 @@
+import 'package:flutter/material.dart';
+
 abstract class AppConstants {
   static const String appName = 'WizeCards';
   static const String appVersion = '1.0.0';
   static const String apiBaseUrl = 'https://api.wizecards.com';
   static const String supportEmail = 'support@wizecards.com';
+  static const String appLogo = 'assets/images/branding/logo.svg';
 }
 
 abstract class BorderRadiusConstants {
@@ -30,4 +33,8 @@ abstract class TextSizeConstants {
   static const double title = 20.0;
   static const double headline = 24.0;
   static const double display = 32.0;
+}
+
+abstract class ColorConstants {
+  static const Color subtitle = Color(0xff64748B);
 }

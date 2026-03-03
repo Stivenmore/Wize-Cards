@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
+import 'package:wize_cards/features/login/presentation/login_screen.dart';
 import 'package:wize_cards/features/splash/presentation/splash_screen.dart';
 
 class RouteGenerator {
@@ -12,7 +13,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
 
       case AppRoutes.login:
-      //  return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
 
       case AppRoutes.decks:
       //  return MaterialPageRoute(builder: (_) => const DecksScreen());
