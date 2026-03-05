@@ -5,18 +5,13 @@ import 'package:wize_cards/features/login/presentation/constants/login_screen_co
 class GoogleSignInButton extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const GoogleSignInButton({
-  super.key,
-  required this.onPressed,
-  });
+  const GoogleSignInButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-  return ElevatedButton(
+    return ElevatedButton(
       onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.only(left: 4)
-      ),
+      style: ElevatedButton.styleFrom(padding: EdgeInsets.only(left: 4)),
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -28,16 +23,12 @@ class GoogleSignInButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(6),
               ),
               padding: const EdgeInsets.all(12),
-              child: SvgPicture.asset(
-                "assets/images/icons/google-icon.svg",
-              ),
+              child: SvgPicture.asset("assets/images/icons/google-icon.svg"),
             ),
           ),
           Text(
             LoginScreenConstants.googleSignInButton,
-            style: TextStyle(
-              fontSize: 16,
-            ),
+            style: TextStyle(fontSize: 16),
           ),
         ],
       ),

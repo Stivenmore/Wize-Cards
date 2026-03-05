@@ -12,11 +12,8 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             Center(child: SloganSectionWidget()),
-            Center(child: GoogleSignInButton(
-                onPressed: () { },
-              )
-            )
-          ]
+            Center(child: GoogleSignInButton(onPressed: () {})),
+          ],
         ),
       ),
     );
