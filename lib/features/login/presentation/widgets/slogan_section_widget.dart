@@ -32,8 +32,7 @@ class SloganSectionWidget extends StatelessWidget {
           textAlign: TextAlign.center,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-        ),
-        OrDividerWidget()
+        )
       ],
     );
   }
