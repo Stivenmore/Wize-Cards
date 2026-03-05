@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/login/presentation/constants/login_screen_constants.dart';
 
 class GoogleSignInButton extends StatelessWidget {
@@ -19,16 +20,16 @@ class GoogleSignInButton extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(6),
+                color: Theme.of(context).primaryIconTheme.color,
+                borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
               ),
-              padding: const EdgeInsets.all(12),
-              child: SvgPicture.asset("assets/images/icons/google-icon.svg"),
+              padding: const EdgeInsets.all(SpacingConstants.twelve),
+              child: SvgPicture.asset(AppConstants.googleLogo),
             ),
           ),
           Text(
             LoginScreenConstants.googleSignInButton,
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(fontSize: TextSizeConstants.bodyLarge),
           ),
         ],
       ),
