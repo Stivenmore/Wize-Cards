@@ -6,6 +6,7 @@ abstract class AppConstants {
   static const String apiBaseUrl = 'https://api.wizecards.com';
   static const String supportEmail = 'support@wizecards.com';
   static const String appLogo = 'assets/images/branding/logo.svg';
+  static const String googleLogo = 'assets/images/icons/google-icon.svg';
 }
 
 abstract class BorderRadiusConstants {
@@ -19,6 +20,7 @@ abstract class BorderRadiusConstants {
 abstract class SpacingConstants {
   static const double xs = 4.0;
   static const double small = 8.0;
+  static const double twelve = 12.0;
   static const double medium = 16.0;
   static const double large = 24.0;
   static const double xLarge = 32.0;
