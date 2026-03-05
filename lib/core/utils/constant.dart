@@ -39,4 +39,6 @@ abstract class TextSizeConstants {
 
 abstract class ColorConstants {
   static const Color subtitle = Color(0xff64748B);
+  static const Color coolGray = Color(0xffE2E8F0);
+  static const Color navyGray = Color(0xff334155);
 }
