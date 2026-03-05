@@ -11,7 +11,7 @@ class GoogleSignInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(padding: EdgeInsets.only(left: 4)),
       child: Stack(
         alignment: Alignment.center,
