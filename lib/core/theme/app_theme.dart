@@ -6,8 +6,8 @@ class AppTheme {
   static const primaryColor = Color(0xFF1152D4); // Wize Blue
   static const scaffoldBackground = Color(0xFFF5F7FA); // Light Grey
   static const cardBackground = Colors.white; // White for cards
-  static const secondaryTextColor = Color(0xFFD8D8DA); // Light grey for secondary text
-  static const dividercolor = Color(0xFFD8D8DA); // Light grey for divider
+  static const secondaryTextColor = Color(0xFF8D8D90); // Light grey for secondary text
+  static const dividercolor = Color(0xFF8D8D90); // Light grey for divider
 
   static ThemeData get lightTheme {
     return ThemeData(
