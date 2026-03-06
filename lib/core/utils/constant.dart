@@ -35,6 +35,14 @@ abstract class TextSizeConstants {
   static const double display = 32.0;
 }
 
+abstract class ThicknessConstans {
+  static const double xs = 1.0;
+}
+
 abstract class ColorConstants {
   static const Color subtitle = Color(0xff64748B);
+}
+
+abstract class TextConstans {
+  static const String orDivider = 'OR';
 }
