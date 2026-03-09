@@ -29,5 +29,31 @@ abstract class TextSizeConstants {
   static const double subtitle = 18.0;
   static const double title = 20.0;
   static const double headline = 24.0;
+  static const double headlineLarge = 30.0;
   static const double display = 32.0;
+}
+
+abstract class SizeConstants {
+  static const double buttonHeight = 52.0;
+  static const double buttonMinWidth = 108.0;
+  static const double iconSmall = 18.0;
+}
+
+abstract class AnimationConstants {
+  static const Duration fast = Duration(milliseconds: 200);
+  static const Duration normal = Duration(milliseconds: 300);
+}
+
+abstract class OnboardingConstants {
+  /// Ratio de altura de imagen para páginas estándar (1 y 3)
+  static const double standardImageHeightRatio = 0.55;
+
+  /// Ratio de altura de imagen para la página central (2)
+  static const double expandedImageHeightRatio = 0.65;
+
+  /// Ancho del dot indicator activo
+  static const double dotActiveWidth = 32.0;
+
+  /// Tamaño del dot indicator (alto e inactivo ancho)
+  static const double dotSize = 10.0;
 }

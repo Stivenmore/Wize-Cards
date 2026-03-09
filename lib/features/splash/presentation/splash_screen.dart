@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wize_cards/core/router/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -8,6 +9,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _navigateToNextScreen();
+  }
+
+  /// Espera 2 segundos y navega al onboarding.
+  /// TODO: Verificar hasSeenOnboarding con SharedPreferences
+  /// para decidir si ir a onboarding o login.
+  Future<void> _navigateToNextScreen() async {
+    await Future.delayed(const Duration(seconds: 2));
+    if (!mounted) return;
+    Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
