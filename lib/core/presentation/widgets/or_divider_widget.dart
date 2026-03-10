@@ -10,12 +10,7 @@ class OrDividerWidget extends StatelessWidget {
     return Row(
       spacing: SpacingConstants.medium,
       children: [
-        Expanded(
-          child: Divider(
-            thickness: ThicknessConstans.xs,
-            color: Theme.of(context).dividerColor,
-          ),
-        ),
+        Expanded(child: Divider()),
         Text(
           TextConstans.orDivider,
           style: GoogleFonts.inter(
@@ -23,12 +18,7 @@ class OrDividerWidget extends StatelessWidget {
             color: Theme.of(context).dividerColor,
           ),
         ),
-        Expanded(
-          child: Divider(
-            thickness: ThicknessConstans.xs,
-            color: Theme.of(context).dividerColor,
-          ),
-        ),
+        Expanded(child: Divider()),
       ],
     );
   }

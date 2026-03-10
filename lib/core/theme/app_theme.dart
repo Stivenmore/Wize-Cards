@@ -101,7 +101,10 @@ class AppTheme {
       ),
 
       // Color general para divider
-      dividerColor: dividercolor,
+      dividerTheme: DividerThemeData(
+        color: dividercolor,
+        thickness: ThicknessConstans.xs
+      ),
 
       // Estilo de tarjetas por defecto (Sombra suave)
       cardTheme: CardThemeData(
