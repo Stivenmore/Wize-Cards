@@ -53,6 +53,19 @@ abstract class AnimationConstants {
   static const Duration normal = Duration(milliseconds: 300);
 }
 
+abstract class FlashcardConstants {
+  static const double cardBorderRadius = 16.0;
+  static const double badgeRadius = 4.0;
+  static const double badgeHeight = 19.0;
+  static const double volumeIconSize = 28.0;
+  static const double volumeIconOpacity = 0.54;
+  static const double wordFontSize = 24.0;
+  static const double categoryFontSize = 12.0;
+  static const double labelFontSize = 13.0;
+  static const double labelLetterSpacing = 0.5;
+  static const double labelLineHeight = 15.0;
+}
+
 abstract class OnboardingConstants {
   /// Ratio de altura de imagen para páginas estándar (1 y 3)
   static const double standardImageHeightRatio = 0.55;
