@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:wize_cards/core/presentation/widgets/icon_app_widget.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
+import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/features/splash/presentation/constants/splash_screen_constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,23 +32,32 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
-      body: Column(
-        mainAxisAlignment: .center,
-        crossAxisAlignment: .center,
-        spacing: 24,
-        children: [
-          Center(
-            child: Text(
-              'Splash Screen',
-              style: Theme.of(context).textTheme.labelLarge,
+      body: Center(
+        child: Column(
+          mainAxisSize: .min,
+          mainAxisAlignment: .center,
+          crossAxisAlignment: .center,
+          spacing: SpacingConstants.small,
+          children: [
+            IconAppWidget(
+              backgroundColor: SplashScreenConstants.splashColorIcon,
+              assetPath: IconAppType.filled,
+              size: IconSizeConstants.x69,
+              borderRadius: BorderRadiusConstants.xLarge,
             ),
-          ),
-          CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(
-              Theme.of(context).highlightColor,
+            SizedBox(height: SpacingConstants.small),
+            Text(
+              AppConstants.appName,
+              style: Theme.of(context).textTheme.displayMedium,
+              textAlign: TextAlign.center,
             ),
-          ),
-        ],
+            Text(
+              SplashScreenConstants.brand,
+              style: Theme.of(context).textTheme.bodySmall,
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -142,15 +142,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         // Paginas 1 y 3: imagen 55% alto, cuadrada
                         final imageHeight = isMiddle
                             ? constraints.maxHeight *
-                                OnboardingConstants.expandedImageHeightRatio
+                                  OnboardingConstants.expandedImageHeightRatio
                             : constraints.maxHeight *
-                                OnboardingConstants.standardImageHeightRatio;
+                                  OnboardingConstants.standardImageHeightRatio;
                         final imageWidth = isMiddle
                             ? availableWidth
                             : (constraints.maxHeight *
-                                    OnboardingConstants
-                                        .standardImageHeightRatio)
-                                .clamp(0.0, availableWidth);
+                                      OnboardingConstants
+                                          .standardImageHeightRatio)
+                                  .clamp(0.0, availableWidth);
 
                         return SingleChildScrollView(
                           physics: const NeverScrollableScrollPhysics(),
@@ -249,10 +249,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     if (_isFirstPage) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          _buildDots(),
-          _buildNextButton(),
-        ],
+        children: [_buildDots(), _buildNextButton()],
       );
     }
 
@@ -286,7 +283,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         spacing: SpacingConstants.small,
         children: [
           Text('Next'),
-          Icon(Icons.arrow_forward, size: SizeConstants.iconSmall),
+          Icon(Icons.arrow_forward, size: IconSizeConstants.x18),
         ],
       ),
     );
@@ -322,17 +319,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           backgroundColor: ColorConstants.primaryBlue,
           foregroundColor: Colors.white,
           minimumSize: isFullWidth
-              ? const Size(
-                  double.infinity,
-                  SizeConstants.buttonHeight,
-                )
+              ? const Size(double.infinity, SizeConstants.buttonHeight)
               : const Size(
                   SizeConstants.buttonMinWidth,
                   SizeConstants.buttonHeight,
                 ),
           shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular(BorderRadiusConstants.circular),
+            borderRadius: BorderRadius.circular(BorderRadiusConstants.circular),
           ),
           elevation: 0,
         ),

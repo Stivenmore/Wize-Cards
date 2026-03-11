@@ -20,6 +20,13 @@ class AppTheme {
 
       // Tipografia global
       textTheme: TextTheme(
+        displayMedium: GoogleFonts.inter(
+          fontSize: TextSizeConstants.displayMedium,
+          fontWeight: FontWeight.w800,
+          color: Colors.white,
+          height: 1.2,
+          letterSpacing: -1.0,
+        ),
         // Onboarding titulo: Inter 30px Bold
         headlineLarge: GoogleFonts.inter(
           fontSize: TextSizeConstants.headlineLarge,
@@ -43,6 +50,12 @@ class AppTheme {
           fontSize: 20,
           fontWeight: FontWeight.w500,
           color: ColorConstants.subtitle,
+        ),
+        bodySmall: GoogleFonts.inter(
+          fontSize: TextSizeConstants.body,
+          fontWeight: FontWeight.w400,
+          color: ColorConstants.primaryWhite,
+          wordSpacing: 0.35,
         ),
         // Descripcion: Inter 16px Regular
         bodyMedium: GoogleFonts.inter(
