@@ -4,6 +4,7 @@ abstract class AppConstants {
   static const String apiBaseUrl = 'https://api.wizecards.com';
   static const String supportEmail = 'support@wizecards.com';
   static const String appLogo = 'assets/images/branding/logo.svg';
+  static const String appLogoFilled = 'assets/images/branding/logo-filled.svg';
   static const String googleLogo = 'assets/images/icons/google-icon.svg';
 }
 
@@ -34,12 +35,12 @@ abstract class TextSizeConstants {
   static const double headline = 24.0;
   static const double headlineLarge = 30.0;
   static const double display = 32.0;
+  static const double displayMedium = 36.0;
 }
 
 abstract class SizeConstants {
   static const double buttonHeight = 52.0;
   static const double buttonMinWidth = 108.0;
-  static const double iconSmall = 18.0;
 }
 
 abstract class AnimationConstants {
@@ -59,4 +60,14 @@ abstract class OnboardingConstants {
 
   /// Tamaño del dot indicator (alto e inactivo ancho)
   static const double dotSize = 10.0;
+}
+
+abstract class IconSizeConstants {
+  static const double x69 = 69.0;
+  static const double x64 = 64.0;
+  static const double x48 = 48.0;
+  static const double x32 = 32.0;
+  static const double x24 = 24.0;
+  static const double x18 = 18.0;
+  static const double x16 = 16.0;
 }

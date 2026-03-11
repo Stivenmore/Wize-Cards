@@ -12,6 +12,7 @@ class SloganSectionWidget extends StatelessWidget {
       spacing: SpacingConstants.large,
       children: [
         IconAppWidget(
+          assetPath: IconAppType.outlined,
           boxShadow: [
             BoxShadow(
               blurRadius: 6,

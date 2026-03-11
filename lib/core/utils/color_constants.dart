@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 /// Estos colores se utilizan en [AppTheme] para resolver dark/light mode.
 abstract class ColorConstants {
   // Primarios
+  static const Color primaryWhite = Color(0xFFFFFFFF);
   static const Color primaryBlue = Color(0xFF1673D0);
   static const Color primaryBlueShadow = Color(0xFF3B82F6);
 
@@ -19,4 +20,5 @@ abstract class ColorConstants {
   // Fondos
   static const Color scaffoldBackground = Color(0xFFF5F7FA);
   static const Color cardBackground = Colors.white;
+
 }
