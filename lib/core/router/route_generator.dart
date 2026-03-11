@@ -14,11 +14,9 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
 
       case AppRoutes.onboarding:
-        return MaterialPageRoute(
-          builder: (_) => const OnboardingScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const OnboardingScreen());
 
-      case AppRoutes.login:
+      case AppRoutes.welcome:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
 
       case AppRoutes.decks:

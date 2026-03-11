@@ -5,10 +5,7 @@ import 'package:wize_cards/core/utils/constant.dart';
 class DotIndicator extends StatelessWidget {
   final bool isActive;
 
-  const DotIndicator({
-    super.key,
-    required this.isActive,
-  });
+  const DotIndicator({super.key, required this.isActive});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +16,7 @@ class DotIndicator extends StatelessWidget {
           : OnboardingConstants.dotSize,
       height: OnboardingConstants.dotSize,
       decoration: BoxDecoration(
-        color: isActive
-            ? ColorConstants.dotActive
-            : ColorConstants.dotInactive,
+        color: isActive ? ColorConstants.dotActive : ColorConstants.dotInactive,
         borderRadius: BorderRadius.circular(BorderRadiusConstants.circular),
       ),
     );
