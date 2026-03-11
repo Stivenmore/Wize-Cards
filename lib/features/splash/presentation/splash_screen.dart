@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisSize: .min,
           mainAxisAlignment: .center,
           crossAxisAlignment: .center,
-          spacing: 8,
+          spacing: SpacingConstants.small,
           children: [
             IconAppWidget(
               backgroundColor: SplashScreenConstants.splashColorIcon,
