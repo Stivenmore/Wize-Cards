@@ -64,6 +64,15 @@ abstract class FlashcardConstants {
   static const double labelFontSize = 13.0;
   static const double labelLetterSpacing = 0.5;
   static const double labelLineHeight = 15.0;
+
+  // Card padding
+  static const double cardPaddingHorizontal = 21.0;
+  static const double cardPaddingTop = 23.0;
+  static const double cardPaddingBottom = 37.0;
+
+  // Icon assets
+  static const String volumeIconAsset = 'assets/images/icons/volume-high.svg';
+  static const String touchIconAsset = 'assets/images/icons/touch-icon.svg';
 }
 
 abstract class OnboardingConstants {

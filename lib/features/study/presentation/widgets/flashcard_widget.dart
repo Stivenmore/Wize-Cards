@@ -43,9 +43,11 @@ class FlashcardWidget extends StatelessWidget {
             ),
           ],
         ),
-        padding: const EdgeInsets.symmetric(
-          vertical: SpacingConstants.medium,
-          horizontal: SpacingConstants.small,
+        padding: const EdgeInsets.only(
+          left: FlashcardConstants.cardPaddingHorizontal,
+          right: FlashcardConstants.cardPaddingHorizontal,
+          top: FlashcardConstants.cardPaddingTop,
+          bottom: FlashcardConstants.cardPaddingBottom,
         ),
         child: Column(
           children: [
