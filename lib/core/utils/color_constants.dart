@@ -17,6 +17,9 @@ abstract class ColorConstants {
   static const Color dotActive = Color(0xFF1673D0);
   static const Color dotInactive = Color(0xFFE2E8F0);
 
+  // Bordes
+  static const Color borderLight = Color(0xFFD1D5DB);
+
   // Fondos
   static const Color scaffoldBackground = Color(0xFFF5F7FA);
   static const Color cardBackground = Colors.white;
