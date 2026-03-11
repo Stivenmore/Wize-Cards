@@ -54,21 +54,10 @@ abstract class AnimationConstants {
 }
 
 abstract class FlashcardConstants {
-  static const double cardBorderRadius = 16.0;
   static const double badgeRadius = 4.0;
   static const double badgeHeight = 19.0;
   static const double volumeIconSize = 28.0;
   static const double volumeIconOpacity = 0.54;
-  static const double wordFontSize = 24.0;
-  static const double categoryFontSize = 12.0;
-  static const double labelFontSize = 13.0;
-  static const double labelLetterSpacing = 0.5;
-  static const double labelLineHeight = 15.0;
-
-  // Card padding
-  static const double cardPaddingHorizontal = 21.0;
-  static const double cardPaddingTop = 23.0;
-  static const double cardPaddingBottom = 37.0;
 
   // Icon assets
   static const String volumeIconAsset = 'assets/images/icons/volume-high.svg';

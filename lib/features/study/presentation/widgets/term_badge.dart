@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 
@@ -15,25 +14,21 @@ class TermBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: FlashcardConstants.badgeHeight,
       padding: const EdgeInsets.symmetric(
         horizontal: SpacingConstants.small,
+        vertical: SpacingConstants.xs,
       ),
       decoration: BoxDecoration(
         color: ColorConstants.termBadgeBackground,
         borderRadius: BorderRadius.circular(FlashcardConstants.badgeRadius),
       ),
-      alignment: Alignment.center,
       child: Text(
         label.toUpperCase(),
-        style: GoogleFonts.lexend(
-          fontSize: FlashcardConstants.labelFontSize,
-          fontWeight: FontWeight.w700,
-          color: ColorConstants.termBadgeText,
-          height: FlashcardConstants.labelLineHeight /
-              FlashcardConstants.labelFontSize,
-          letterSpacing: FlashcardConstants.labelLetterSpacing,
-        ),
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              color: ColorConstants.termBadgeText,
+            ),
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }

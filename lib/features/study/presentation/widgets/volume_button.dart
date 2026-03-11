@@ -14,24 +14,20 @@ class VolumeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: FlashcardConstants.volumeIconSize,
-        height: FlashcardConstants.volumeIconSize,
-        decoration: BoxDecoration(
-          color: ColorConstants.volumeIcon.withValues(
-            alpha: FlashcardConstants.volumeIconOpacity,
-          ),
-          shape: BoxShape.circle,
+    return IconButton(
+      onPressed: onPressed,
+      icon: SvgPicture.asset(
+        FlashcardConstants.volumeIconAsset,
+        width: SizeConstants.iconSmall,
+        height: SizeConstants.iconSmall,
+      ),
+      style: IconButton.styleFrom(
+        backgroundColor: ColorConstants.volumeIcon.withValues(
+          alpha: FlashcardConstants.volumeIconOpacity,
         ),
-        child: Center(
-          child: SvgPicture.asset(
-            FlashcardConstants.volumeIconAsset,
-            width: SizeConstants.iconSmall,
-            height: SizeConstants.iconSmall,
-          ),
-        ),
+        fixedSize: Size.square(FlashcardConstants.volumeIconSize),
+        minimumSize: Size.square(FlashcardConstants.volumeIconSize),
+        padding: EdgeInsets.zero,
       ),
     );
   }

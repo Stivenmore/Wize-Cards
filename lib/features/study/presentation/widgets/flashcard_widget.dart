@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
-import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/core/theme/app_theme.dart';
 import 'package:wize_cards/features/study/presentation/widgets/flashcard_body.dart';
 import 'package:wize_cards/features/study/presentation/widgets/flashcard_header.dart';
 import 'package:wize_cards/features/study/presentation/widgets/tap_to_flip_hint.dart';
@@ -29,40 +28,24 @@ class FlashcardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: ColorConstants.cardBackground,
-          borderRadius: BorderRadius.circular(
-            FlashcardConstants.cardBorderRadius,
-          ),
-          boxShadow: const [
-            BoxShadow(
-              color: Color(0x0D000000),
-              offset: Offset(0, 2),
-              blurRadius: 8,
-            ),
-          ],
-        ),
-        padding: const EdgeInsets.only(
-          left: FlashcardConstants.cardPaddingHorizontal,
-          right: FlashcardConstants.cardPaddingHorizontal,
-          top: FlashcardConstants.cardPaddingTop,
-          bottom: FlashcardConstants.cardPaddingBottom,
-        ),
-        child: Column(
-          children: [
-            FlashcardHeader(
-              badgeLabel: badgeLabel,
-              onVolumeTap: onVolumeTap,
-            ),
-            Expanded(
-              child: FlashcardBody(
-                word: word,
-                category: category,
+      child: Card(
+        child: Padding(
+          padding: AppTheme.flashcardPadding,
+          child: Column(
+            children: [
+              FlashcardHeader(
+                badgeLabel: badgeLabel,
+                onVolumeTap: onVolumeTap,
               ),
-            ),
-            const TapToFlipHint(),
-          ],
+              Expanded(
+                child: FlashcardBody(
+                  word: word,
+                  category: category,
+                ),
+              ),
+              const TapToFlipHint(),
+            ],
+          ),
         ),
       ),
     );

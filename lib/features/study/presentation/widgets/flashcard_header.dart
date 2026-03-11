@@ -18,7 +18,7 @@ class FlashcardHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        TermBadge(label: badgeLabel),
+        Flexible(child: TermBadge(label: badgeLabel)),
         VolumeButton(onPressed: onVolumeTap),
       ],
     );

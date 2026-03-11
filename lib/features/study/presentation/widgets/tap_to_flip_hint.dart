@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 
@@ -24,14 +23,9 @@ class TapToFlipHint extends StatelessWidget {
         ),
         Text(
           'TAP TO FLIP',
-          style: GoogleFonts.lexend(
-            fontSize: FlashcardConstants.labelFontSize,
-            fontWeight: FontWeight.w700,
-            color: ColorConstants.flashcardHint,
-            height: FlashcardConstants.labelLineHeight /
-                FlashcardConstants.labelFontSize,
-            letterSpacing: FlashcardConstants.labelLetterSpacing,
-          ),
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                color: ColorConstants.flashcardHint,
+              ),
         ),
       ],
     );
