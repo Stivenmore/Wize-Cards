@@ -6,6 +6,8 @@ abstract class AppConstants {
   static const String appLogo = 'assets/images/branding/logo.svg';
   static const String appLogoFilled = 'assets/images/branding/logo-filled.svg';
   static const String googleLogo = 'assets/images/icons/google-icon.svg';
+  static const String backIcon = 'assets/images/icons/back-button.svg';
+  static const String settingsIcon = 'assets/images/icons/settings-icon.svg';
 }
 
 abstract class BorderRadiusConstants {
@@ -42,6 +44,8 @@ abstract class SizeConstants {
   static const double dots = 8.0;
   static const double buttonHeight = 52.0;
   static const double buttonMinWidth = 108.0;
+  static const double iconSmall = 18.0;
+  static const double headerIconButton = 48.0;
 }
 
 abstract class AnimationConstants {
