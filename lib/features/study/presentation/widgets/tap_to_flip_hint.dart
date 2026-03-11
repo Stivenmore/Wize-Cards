@@ -14,7 +14,7 @@ class TapToFlipHint extends StatelessWidget {
       spacing: SpacingConstants.xs,
       children: [
         SvgPicture.asset(
-          AppConstants.touchIcon,
+          StudyScreenConstants.touchIcon,
           height: StudyScreenConstants.volumeIconSize,
           colorFilter: const ColorFilter.mode(
             StudyScreenConstants.flashcardHint,

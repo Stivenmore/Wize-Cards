@@ -17,7 +17,7 @@ class VolumeButton extends StatelessWidget {
     return IconButton(
       onPressed: onPressed,
       icon: SvgPicture.asset(
-        AppConstants.volumeHighIcon,
+        StudyScreenConstants.volumeHighIcon,
         width: IconSizeConstants.x18,
         height: IconSizeConstants.x18,
       ),

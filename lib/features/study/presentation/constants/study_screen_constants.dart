@@ -21,6 +21,10 @@ abstract class StudyScreenConstants {
   static const double flashcardPaddingTop = 23.0;
   static const double flashcardPaddingBottom = 37.0;
 
+  // --- Assets ---
+  static const String volumeHighIcon = 'assets/images/icons/volume-high.svg';
+  static const String touchIcon = 'assets/images/icons/touch-icon.svg';
+
   // --- Textos ---
   static const String tapToFlipLabel = 'TAP TO FLIP';
 }

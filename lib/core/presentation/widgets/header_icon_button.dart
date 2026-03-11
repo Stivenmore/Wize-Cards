@@ -19,7 +19,7 @@ class HeaderIconButton extends StatelessWidget {
       onPressed: onPressed,
       icon: icon,
       style: IconButton.styleFrom(
-        backgroundColor: ColorConstants.primaryWhite,
+        backgroundColor: Theme.of(context).highlightColor,
         fixedSize: Size.square(SizeConstants.headerIconButton),
         minimumSize: Size.square(SizeConstants.headerIconButton),
         padding: EdgeInsets.zero,

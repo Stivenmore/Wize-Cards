@@ -8,8 +8,6 @@ abstract class AppConstants {
   static const String googleLogo = 'assets/images/icons/google-icon.svg';
   static const String backIcon = 'assets/images/icons/back-button.svg';
   static const String settingsIcon = 'assets/images/icons/settings-icon.svg';
-  static const String volumeHighIcon = 'assets/images/icons/volume-high.svg';
-  static const String touchIcon = 'assets/images/icons/touch-icon.svg';
 }
 
 abstract class BorderRadiusConstants {
