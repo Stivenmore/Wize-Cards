@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
+import 'package:wize_cards/core/utils/constant.dart';
 
 /// A widget that renders three dots with a staggered fade animation,
 /// typically used as a loading indicator.
@@ -10,8 +11,8 @@ class AnimatedDotsWidget extends StatefulWidget {
   const AnimatedDotsWidget({
     super.key,
     this.dotColor = ColorConstants.primaryWhite,
-    this.dotSize = 10.0,
-    this.spacing = 8.0,
+    this.dotSize = SizeConstants.dots,
+    this.spacing = SpacingConstants.small,
   });
 
   /// Color of each dot. Defaults to white.
