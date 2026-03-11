@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wize_cards/core/theme/app_theme.dart';
+import 'package:wize_cards/features/study/presentation/constants/study_screen_constants.dart';
 import 'package:wize_cards/features/study/presentation/widgets/flashcard_body.dart';
 import 'package:wize_cards/features/study/presentation/widgets/flashcard_header.dart';
 import 'package:wize_cards/features/study/presentation/widgets/tap_to_flip_hint.dart';
@@ -27,10 +27,16 @@ class FlashcardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: HitTestBehavior.deferToChild,
       onTap: onTap,
       child: Card(
         child: Padding(
-          padding: AppTheme.flashcardPadding,
+          padding: const EdgeInsets.only(
+            left: StudyScreenConstants.flashcardPaddingHorizontal,
+            right: StudyScreenConstants.flashcardPaddingHorizontal,
+            top: StudyScreenConstants.flashcardPaddingTop,
+            bottom: StudyScreenConstants.flashcardPaddingBottom,
+          ),
           child: Column(
             children: [
               FlashcardHeader(

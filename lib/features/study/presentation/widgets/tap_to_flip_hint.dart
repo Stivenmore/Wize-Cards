@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/features/study/presentation/constants/study_screen_constants.dart';
 
 /// Atomo: Indicador "TAP TO FLIP" con icono de mano/dedo.
 class TapToFlipHint extends StatelessWidget {
@@ -14,17 +14,17 @@ class TapToFlipHint extends StatelessWidget {
       spacing: SpacingConstants.xs,
       children: [
         SvgPicture.asset(
-          FlashcardConstants.touchIconAsset,
-          height: FlashcardConstants.volumeIconSize,
+          AppConstants.touchIcon,
+          height: StudyScreenConstants.volumeIconSize,
           colorFilter: const ColorFilter.mode(
-            ColorConstants.flashcardHint,
+            StudyScreenConstants.flashcardHint,
             BlendMode.srcIn,
           ),
         ),
         Text(
-          'TAP TO FLIP',
+          StudyScreenConstants.tapToFlipLabel,
           style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                color: ColorConstants.flashcardHint,
+                color: StudyScreenConstants.flashcardHint,
               ),
         ),
       ],

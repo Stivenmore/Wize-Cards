@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/features/study/presentation/constants/study_screen_constants.dart';
 
 /// Atomo: Boton de volumen con fondo circular para text-to-speech.
 class VolumeButton extends StatelessWidget {
@@ -17,16 +17,16 @@ class VolumeButton extends StatelessWidget {
     return IconButton(
       onPressed: onPressed,
       icon: SvgPicture.asset(
-        FlashcardConstants.volumeIconAsset,
-        width: SizeConstants.iconSmall,
-        height: SizeConstants.iconSmall,
+        AppConstants.volumeHighIcon,
+        width: IconSizeConstants.x18,
+        height: IconSizeConstants.x18,
       ),
       style: IconButton.styleFrom(
-        backgroundColor: ColorConstants.volumeIcon.withValues(
-          alpha: FlashcardConstants.volumeIconOpacity,
+        backgroundColor: StudyScreenConstants.volumeIconBackground.withValues(
+          alpha: StudyScreenConstants.volumeIconOpacity,
         ),
-        fixedSize: Size.square(FlashcardConstants.volumeIconSize),
-        minimumSize: Size.square(FlashcardConstants.volumeIconSize),
+        fixedSize: Size.square(StudyScreenConstants.volumeIconSize),
+        minimumSize: Size.square(StudyScreenConstants.volumeIconSize),
         padding: EdgeInsets.zero,
       ),
     );

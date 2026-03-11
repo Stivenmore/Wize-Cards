@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/features/study/presentation/constants/study_screen_constants.dart';
 
 /// Atomo: Badge "TERM" con fondo azul claro y texto uppercase.
 class TermBadge extends StatelessWidget {
@@ -19,13 +19,13 @@ class TermBadge extends StatelessWidget {
         vertical: SpacingConstants.xs,
       ),
       decoration: BoxDecoration(
-        color: ColorConstants.termBadgeBackground,
-        borderRadius: BorderRadius.circular(FlashcardConstants.badgeRadius),
+        color: StudyScreenConstants.termBadgeBackground,
+        borderRadius: BorderRadius.circular(StudyScreenConstants.badgeRadius),
       ),
       child: Text(
         label.toUpperCase(),
         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-              color: ColorConstants.termBadgeText,
+              color: StudyScreenConstants.termBadgeText,
             ),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,

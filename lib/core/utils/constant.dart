@@ -8,6 +8,8 @@ abstract class AppConstants {
   static const String googleLogo = 'assets/images/icons/google-icon.svg';
   static const String backIcon = 'assets/images/icons/back-button.svg';
   static const String settingsIcon = 'assets/images/icons/settings-icon.svg';
+  static const String volumeHighIcon = 'assets/images/icons/volume-high.svg';
+  static const String touchIcon = 'assets/images/icons/touch-icon.svg';
 }
 
 abstract class BorderRadiusConstants {
@@ -51,17 +53,6 @@ abstract class SizeConstants {
 abstract class AnimationConstants {
   static const Duration fast = Duration(milliseconds: 200);
   static const Duration normal = Duration(milliseconds: 300);
-}
-
-abstract class FlashcardConstants {
-  static const double badgeRadius = 4.0;
-  static const double badgeHeight = 19.0;
-  static const double volumeIconSize = 28.0;
-  static const double volumeIconOpacity = 0.54;
-
-  // Icon assets
-  static const String volumeIconAsset = 'assets/images/icons/volume-high.svg';
-  static const String touchIconAsset = 'assets/images/icons/touch-icon.svg';
 }
 
 abstract class OnboardingConstants {

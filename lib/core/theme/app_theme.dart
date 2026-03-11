@@ -6,14 +6,6 @@ import 'package:wize_cards/core/utils/constant.dart';
 class AppTheme {
   static const primaryColor = Color(0xFF1152D4); // Wize Blue
 
-  // Flashcard card padding (theme configuration)
-  static const EdgeInsets flashcardPadding = EdgeInsets.only(
-    left: 21.0,
-    right: 21.0,
-    top: 23.0,
-    bottom: 37.0,
-  );
-
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: ColorConstants.primaryBlue,
@@ -87,23 +79,15 @@ class AppTheme {
           letterSpacing: 0.35,
         ),
 
-        // Flashcard: palabra principal — Inter 24px Bold azul
+        // Titulo: Inter 24px Bold azul
         titleLarge: GoogleFonts.inter(
           fontSize: TextSizeConstants.headline,
           fontWeight: FontWeight.w700,
-          color: ColorConstants.flashcardWord,
+          color: primaryColor,
           letterSpacing: 0.5,
           height: 15.0 / 24.0,
         ),
-        // Flashcard: categoria — Inter 12px Bold gris
-        bodySmall: GoogleFonts.inter(
-          fontSize: TextSizeConstants.caption,
-          fontWeight: FontWeight.w700,
-          color: ColorConstants.flashcardCategory,
-          letterSpacing: 0.5,
-          height: 15.0 / 12.0,
-        ),
-        // Flashcard: label generico (badge, hint) — Inter 13px Bold
+        // Label generico: Inter 13px Bold
         titleSmall: GoogleFonts.inter(
           fontSize: 13.0,
           fontWeight: FontWeight.w700,
