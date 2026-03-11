@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 
 /// Atomo: Boton circular reutilizable para el header de pantallas.
@@ -18,12 +19,12 @@ class HeaderIconButton extends StatelessWidget {
       onPressed: onPressed,
       icon: icon,
       style: IconButton.styleFrom(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorConstants.primaryWhite,
         fixedSize: Size.square(SizeConstants.headerIconButton),
         minimumSize: Size.square(SizeConstants.headerIconButton),
         padding: EdgeInsets.zero,
         shape: CircleBorder(
-          side: BorderSide(color: Colors.grey.shade300),
+          side: BorderSide(color: ColorConstants.borderLight),
         ),
       ),
     );
