@@ -39,6 +39,7 @@ abstract class TextSizeConstants {
 }
 
 abstract class SizeConstants {
+  static const double dots = 8.0;
   static const double buttonHeight = 52.0;
   static const double buttonMinWidth = 108.0;
 }
