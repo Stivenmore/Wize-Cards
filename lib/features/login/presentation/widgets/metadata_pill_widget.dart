@@ -8,19 +8,21 @@ class MetadataPillWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 72,
-      height: 28,
-      alignment: Alignment.center,
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: Theme.of(context).hoverColor,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(BorderRadiusConstants.small),
       ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: Theme.of(context).hintColor,
-          fontSize: TextSizeConstants.caption,
+      child: Padding(
+        padding: EdgeInsets.all(SpacingConstants.xs),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Theme.of(context).hintColor,
+            fontSize: TextSizeConstants.caption,
+          ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
       ),
     );
