@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:wize_cards/core/presentation/buttons/ds_text_button_widget.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/login/presentation/constants/login_screen_constants.dart';
-import 'package:wize_cards/features/login/presentation/widgets/wize_text_button_widget.dart';
 
 class TermsAndConditionsWidget extends StatelessWidget {
-  const TermsAndConditionsWidget({super.key});
+  const TermsAndConditionsWidget({
+    super.key,
+    this.redirectionUrl = AppConstants.apiBaseUrl,
+  });
+
+  final String redirectionUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,10 @@ class TermsAndConditionsWidget extends StatelessWidget {
             fontSize: TextSizeConstants.caption,
           ),
         ),
-        WizeTextButtonWidget(),
+        DSTextButtonWidget(onPressed: () { 
+          final Uri url = Uri.parse(redirectionUrl);
+          launchUrl(url);
+        }, text: LoginScreenConstants.termsLink),
       ],
     );
   }
