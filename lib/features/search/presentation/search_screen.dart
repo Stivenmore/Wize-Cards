@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/features/search/presentation/contanstants/search_constants.dart';
+import 'package:wize_cards/features/search/presentation/widgets/discover_choice_chip_widget.dart';
 import 'package:wize_cards/features/search/presentation/widgets/headline_search_widget.dart';
 import 'package:wize_cards/features/search/presentation/widgets/search_textfield_widget.dart';
 
@@ -19,6 +21,26 @@ class SearchScreen extends StatelessWidget {
             children: [
               HeadlineSearchWidget(onPressed: () {}),
               SearchTextfieldWidget(onSettingsPressed: () {}),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    spacing: SpacingConstants.xs,
+                    children: List.generate(SearchConstants.filters.length, (
+                      index,
+                    ) {
+                      return DiscoverChoiceChipWidget(
+                        label: Text(SearchConstants.filters[index]),
+                        selected: index == 0,
+                        onSelected: (value) {},
+                      );
+                    }),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

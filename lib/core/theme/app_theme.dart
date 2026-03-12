@@ -120,6 +120,25 @@ class AppTheme {
           ),
         ),
       ),
+
+      // Estilo de chips por defecto
+      chipTheme: ChipThemeData(
+        backgroundColor: ColorConstants.primaryWhite,
+        selectedColor: ColorConstants.primaryBlue,
+        secondaryLabelStyle: GoogleFonts.inter(
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.primaryWhite,
+        ),
+        labelStyle: GoogleFonts.inter(
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.textPrimary,
+        ),
+        showCheckmark: false,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.circular),
+        ),
+        side: BorderSide(color: ColorConstants.borderLightGray),
+      ),
     );
   }
 }

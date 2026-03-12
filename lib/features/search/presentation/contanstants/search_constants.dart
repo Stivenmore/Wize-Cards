@@ -9,4 +9,5 @@ abstract class SearchConstants {
   /// Colors
   static const Color searchBackgroundLight = Color(0xFFEEF0F3);
   static const Color searchBackgroundDark = Color(0xFF334155);
+  static const Color choiceChipSelectedColor = Color(0xFFE5E7EB);
 }
