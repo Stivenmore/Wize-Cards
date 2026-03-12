@@ -9,6 +9,7 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: ColorConstants.primaryBlue,
+
       highlightColor: Colors.white,
       scaffoldBackgroundColor: ColorConstants.scaffoldBackground,
       useMaterial3: true,
@@ -54,7 +55,7 @@ class AppTheme {
         bodySmall: GoogleFonts.inter(
           fontSize: TextSizeConstants.body,
           fontWeight: FontWeight.w400,
-          color: ColorConstants.primaryWhite,
+          color: ColorConstants.textPrimary,
           wordSpacing: 0.35,
         ),
         // Descripcion: Inter 16px Regular

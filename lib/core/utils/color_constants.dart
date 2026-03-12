@@ -23,5 +23,4 @@ abstract class ColorConstants {
   // Fondos
   static const Color scaffoldBackground = Color(0xFFF5F7FA);
   static const Color cardBackground = Colors.white;
-
 }
