@@ -21,7 +21,7 @@ class DeckIconWidget extends StatelessWidget {
       height: 48,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: containerColor.withOpacity(containerOpacity),
+        color: containerColor.withValues(alpha: containerOpacity),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Icon(icon, color: iconColor),

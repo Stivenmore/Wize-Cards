@@ -26,10 +26,13 @@ class TermsAndConditionsWidget extends StatelessWidget {
             fontSize: TextSizeConstants.caption,
           ),
         ),
-        DSTextButtonWidget(onPressed: () { 
-          final Uri url = Uri.parse(redirectionUrl);
-          launchUrl(url);
-        }, text: LoginScreenConstants.termsLink),
+        DSTextButtonWidget(
+          onPressed: () {
+            final Uri url = Uri.parse(redirectionUrl);
+            launchUrl(url);
+          },
+          text: LoginScreenConstants.termsLink,
+        ),
       ],
     );
   }
