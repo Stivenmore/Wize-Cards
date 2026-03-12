@@ -5,6 +5,9 @@ import 'package:wize_cards/core/utils/constant.dart';
 
 class AppTheme {
   static const primaryColor = Color(0xFF1152D4); // Wize Blue
+  static const scaffoldBackground = Color(0xFFF5F7FA); // Light Grey
+  static const cardBackground = Colors.white; // White for cards
+  static const dividercolor = Color(0xFF8D8D90); // Light grey for divider
 
   static ThemeData get lightTheme {
     return ThemeData(
@@ -95,6 +98,12 @@ class AppTheme {
           height: 15.0 / 13.0,
           color: ColorConstants.textPrimary,
         ),
+      ),
+
+      // Color general para divider
+      dividerTheme: DividerThemeData(
+        color: dividercolor,
+        thickness: ThicknessConstans.xs
       ),
 
       // Estilo de tarjetas por defecto (Sombra suave)

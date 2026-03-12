@@ -76,3 +76,11 @@ abstract class IconSizeConstants {
   static const double x18 = 18.0;
   static const double x16 = 16.0;
 }
+
+abstract class ThicknessConstans {
+  static const double xs = 1.0;
+}
+
+abstract class TextConstans {
+  static const String orDivider = 'OR';
+}
