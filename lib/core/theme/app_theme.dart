@@ -78,12 +78,30 @@ class AppTheme {
           height: 1.43,
           letterSpacing: 0.35,
         ),
+
+        // Titulo: Inter 24px Bold azul
+        titleLarge: GoogleFonts.inter(
+          fontSize: TextSizeConstants.headline,
+          fontWeight: FontWeight.w700,
+          color: primaryColor,
+          letterSpacing: 0.5,
+          height: 15.0 / 24.0,
+        ),
+        // Label generico: Inter 13px Bold
+        titleSmall: GoogleFonts.inter(
+          fontSize: 13.0,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0.5,
+          height: 15.0 / 13.0,
+          color: ColorConstants.textPrimary,
+        ),
       ),
 
       // Estilo de tarjetas por defecto (Sombra suave)
       cardTheme: CardThemeData(
         elevation: 0,
         color: ColorConstants.cardBackground,
+        margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(BorderRadiusConstants.large),
           side: BorderSide(color: Colors.grey.shade200),
