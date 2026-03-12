@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/login/presentation/constants/login_screen_constants.dart';
 
@@ -12,13 +13,13 @@ class EmailSignInButton extends StatelessWidget {
       onPressed: onPressed,
       icon: const Icon(
         Icons.email_outlined, 
-        color: ColorConstants.navyGray,
+        color: ColorConstants.blueNavy,
         size: TextSizeConstants.bodyLarge,
       ),
       label: Text(
         LoginScreenConstants.emailSignInButton,
         style: TextStyle(
-          color: ColorConstants.navyGray,
+          color: ColorConstants.blueNavy,
           fontWeight: FontWeight.w600,
           fontSize: TextSizeConstants.body,
         ),
@@ -26,7 +27,7 @@ class EmailSignInButton extends StatelessWidget {
       style: OutlinedButton.styleFrom(
         minimumSize: const Size(double.infinity, 50),
         side: BorderSide(
-          color: ColorConstants.coolGray,
+          color: ColorConstants.borderGray,
           width: 1,
         ),
         shape: RoundedRectangleBorder(
