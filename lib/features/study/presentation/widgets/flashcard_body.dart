@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/study/presentation/constants/study_screen_constants.dart';
 
@@ -7,11 +8,7 @@ class FlashcardBody extends StatelessWidget {
   final String word;
   final String category;
 
-  const FlashcardBody({
-    super.key,
-    required this.word,
-    required this.category,
-  });
+  const FlashcardBody({super.key, required this.word, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +20,9 @@ class FlashcardBody extends StatelessWidget {
       children: [
         Text(
           word,
-          style: textTheme.titleLarge,
+          style: textTheme.titleLarge?.copyWith(
+            color: ColorConstants.primaryBlue,
+          ),
           textAlign: TextAlign.center,
         ),
         Text(
