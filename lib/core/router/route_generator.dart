@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
 import 'package:wize_cards/features/login/presentation/login_screen.dart';
 import 'package:wize_cards/features/onboarding/presentation/onboarding_screen.dart';
+import 'package:wize_cards/features/search/presentation/search_screen.dart';
 import 'package:wize_cards/features/splash/presentation/splash_screen.dart';
 
 class RouteGenerator {
@@ -41,6 +42,9 @@ class RouteGenerator {
 
       case AppRoutes.createDeck:
       // return MaterialPageRoute(builder: (_) => const CreateDeckScreen());
+
+      case AppRoutes.search:
+        return MaterialPageRoute(builder: (_) => const SearchScreen());
 
       case AppRoutes.stats:
       //  return MaterialPageRoute(builder: (_) => const StatsScreen());

@@ -79,11 +79,11 @@ class AppTheme {
           letterSpacing: 0.35,
         ),
 
-        // Titulo: Inter 24px Bold azul
+        // Titulo: Inter 24px Bold
         titleLarge: GoogleFonts.inter(
           fontSize: TextSizeConstants.headline,
           fontWeight: FontWeight.w700,
-          color: primaryColor,
+          color: ColorConstants.textPrimary,
           letterSpacing: 0.5,
           height: 15.0 / 24.0,
         ),
