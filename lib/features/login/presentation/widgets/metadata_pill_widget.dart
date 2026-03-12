@@ -4,10 +4,7 @@ import 'package:wize_cards/core/utils/constant.dart';
 class MetadataPillWidget extends StatelessWidget {
   final String text;
 
-  const MetadataPillWidget({
-    super.key,
-    required this.text
-  });
+  const MetadataPillWidget({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +20,8 @@ class MetadataPillWidget extends StatelessWidget {
         text,
         style: TextStyle(
           color: Theme.of(context).hintColor,
-          fontSize: TextSizeConstants.caption
-          ),
+          fontSize: TextSizeConstants.caption,
+        ),
       ),
     );
   }
