@@ -22,7 +22,7 @@ class TitleSesionStateWdiget extends StatelessWidget {
           title.toUpperCase(),
           style: textStyle.copyWith(
             color: Theme.of(context).hintColor,
-            letterSpacing: 1.0,
+            letterSpacing: ThicknessConstans.xs,
           ),
         ),
         Row(
