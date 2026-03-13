@@ -16,6 +16,7 @@ abstract class ColorConstants {
   // Indicadores
   static const Color dotActive = Color(0xFF1673D0);
   static const Color dotInactive = Color(0xFFE2E8F0);
+  static const Color dotGreen = Color(0xFF4CAF50);
 
   // Bordes
   static const Color borderLight = Color(0xFFD1D5DB);
