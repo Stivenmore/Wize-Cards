@@ -9,22 +9,18 @@ class TitleSesionStateWdiget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = const TextStyle(
-      fontSize: TextSizeConstants.caption,
-      fontWeight: FontWeight.bold,
-      color: ColorConstants.textPrimary,
-    );
-
     return Column(
       mainAxisAlignment: .center,
       children: [
         Text(
           title.toUpperCase(),
-          style: textStyle.copyWith(
+          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+            fontSize: TextSizeConstants.caption,
             color: Theme.of(context).hintColor,
             letterSpacing: ThicknessConstans.xs,
           ),
         ),
+        SizedBox(height: SpacingConstants.xs),
         Row(
           mainAxisAlignment: .center,
           spacing: SpacingConstants.small,
@@ -39,7 +35,11 @@ class TitleSesionStateWdiget extends StatelessWidget {
                 ),
               ),
             ),
-            Text(TextConstans.liveSession, style: textStyle),
+            Text(TextConstans.liveSession, 
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                fontSize: TextSizeConstants.caption
+              ),
+            ),
           ],
         ),
       ],
