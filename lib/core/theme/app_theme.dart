@@ -12,7 +12,21 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: ColorConstants.primaryBlue,
-
+      
+      // Borde de boton
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          minimumSize: const Size(double.infinity, SizeConstants.buttonHeight),
+          side: BorderSide(
+            color: ColorConstants.borderLightGray,
+            width: 1,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          ),
+        ),
+      ),
+  
       highlightColor: Colors.white,
       scaffoldBackgroundColor: ColorConstants.scaffoldBackground,
       useMaterial3: true,

@@ -18,21 +18,9 @@ class EmailSignInButton extends StatelessWidget {
       ),
       label: Text(
         LoginScreenConstants.emailSignInButton,
-        style: TextStyle(
-          color: ColorConstants.blueNavy,
-          fontWeight: FontWeight.w600,
-          fontSize: TextSizeConstants.body,
-        ),
-      ),
-      style: OutlinedButton.styleFrom(
-        minimumSize: const Size(double.infinity, 50),
-        side: BorderSide(
-          color: ColorConstants.borderGray,
-          width: 1,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
-        ),
+        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+          color: ColorConstants.blueNavy
+        )
       ),
     );
   }
