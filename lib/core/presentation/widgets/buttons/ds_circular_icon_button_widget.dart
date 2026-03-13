@@ -135,7 +135,7 @@ class DsCircularIconButtonWidget extends StatelessWidget {
     final Color resolvedBackgroundColor = _isTransparent
         ? Colors.transparent
         : (backgroundColor ??
-              (Color.lerp(fallbackSurfaceColor, primary, 0.2) ??
+              (Color.lerp(fallbackSurfaceColor, primary, 0.1) ??
                   Colors.transparent));
 
     final BorderSide borderSide = hasBorder
@@ -150,6 +150,9 @@ class DsCircularIconButtonWidget extends StatelessWidget {
       onPressed: onPressed,
       iconSize: internalIconSize,
       icon: Icon(icon, color: primary),
+      constraints: buttonSize != null
+          ? BoxConstraints.tightFor(width: buttonSize, height: buttonSize)
+          : null,
       style: IconButton.styleFrom(
         fixedSize: buttonSize != null ? Size(buttonSize!, buttonSize!) : null,
         backgroundColor: resolvedBackgroundColor,
