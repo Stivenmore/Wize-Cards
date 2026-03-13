@@ -12,6 +12,7 @@ abstract class ColorConstants {
   static const Color textPrimary = Color(0xFF0F172A);
   static const Color textSecondary = Color(0xFF64748B);
   static const Color subtitle = Color(0xFF64748B);
+  static const Color blueNavy = Color(0xFF334155);
 
   // Indicadores
   static const Color dotActive = Color(0xFF1673D0);
