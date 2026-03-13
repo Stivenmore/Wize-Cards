@@ -10,4 +10,5 @@ class AppRoutes {
   static const String settings = '/settings';
   static const String welcome = '/welcome';
   static const String onboarding = '/onboarding';
+  static const String search = '/search';
 }

@@ -12,6 +12,7 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: ColorConstants.primaryBlue,
+
       highlightColor: Colors.white,
       scaffoldBackgroundColor: ColorConstants.scaffoldBackground,
       useMaterial3: true,
@@ -57,7 +58,7 @@ class AppTheme {
         bodySmall: GoogleFonts.inter(
           fontSize: TextSizeConstants.body,
           fontWeight: FontWeight.w400,
-          color: ColorConstants.primaryWhite,
+          color: ColorConstants.textPrimary,
           wordSpacing: 0.35,
         ),
         // Descripcion: Inter 16px Regular
@@ -82,13 +83,19 @@ class AppTheme {
           letterSpacing: 0.35,
         ),
 
-        // Titulo: Inter 24px Bold azul
+        // Titulo: Inter 24px Bold
         titleLarge: GoogleFonts.inter(
           fontSize: TextSizeConstants.headline,
           fontWeight: FontWeight.w700,
-          color: primaryColor,
+          color: ColorConstants.textPrimary,
           letterSpacing: 0.5,
           height: 15.0 / 24.0,
+        ),
+        // Title Medium: Inter 16px Bold
+        titleMedium: GoogleFonts.inter(
+          fontSize: TextSizeConstants.bodyLarge,
+          fontWeight: FontWeight.w700,
+          color: ColorConstants.textPrimary,
         ),
         // Label generico: Inter 13px Bold
         titleSmall: GoogleFonts.inter(
@@ -97,6 +104,12 @@ class AppTheme {
           letterSpacing: 0.5,
           height: 15.0 / 13.0,
           color: ColorConstants.textPrimary,
+        ),
+        // Display Small: Inter 12px Medium
+        displaySmall: GoogleFonts.inter(
+          fontSize: TextSizeConstants.caption,
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.textSecondary,
         ),
       ),
 
@@ -127,6 +140,25 @@ class AppTheme {
             borderRadius: BorderRadius.circular(BorderRadiusConstants.large),
           ),
         ),
+      ),
+
+      // Estilo de chips por defecto
+      chipTheme: ChipThemeData(
+        backgroundColor: ColorConstants.primaryWhite,
+        selectedColor: ColorConstants.primaryBlue,
+        secondaryLabelStyle: GoogleFonts.inter(
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.primaryWhite,
+        ),
+        labelStyle: GoogleFonts.inter(
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.textPrimary,
+        ),
+        showCheckmark: false,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.circular),
+        ),
+        side: BorderSide(color: ColorConstants.borderLightGray),
       ),
     );
   }
