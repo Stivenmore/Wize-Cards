@@ -61,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 10));
     if (!mounted) return;
-    Navigator.pushReplacementNamed(context, AppRoutes.search);
+    Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
   }
 
   @override
