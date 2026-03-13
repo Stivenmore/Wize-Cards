@@ -4,6 +4,7 @@ import 'package:wize_cards/core/presentation/widgets/inputs/ds_text_field.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/deck_creation/presentation/constants/deck_creation_constants.dart';
+import 'package:wize_cards/features/deck_creation/presentation/widgets/add_card_modal_widget.dart';
 import 'package:wize_cards/features/deck_creation/presentation/widgets/deck_card_item_widget.dart';
 import 'package:wize_cards/features/deck_creation/presentation/widgets/deck_color_selector_widget.dart';
 
@@ -105,7 +106,12 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
                             vertical: SpacingConstants.medium,
                           ),
                           child: DSTextButtonWidget(
-                            onPressed: () {},
+                            onPressed: () async {
+                              final card = await AddCardModalWidget.show(
+                                context,
+                              );
+                              if (card != null) {}
+                            },
                             text: DeckCreationConstants.addCardButton,
                             style: Theme.of(context).textTheme.bodyLarge
                                 ?.copyWith(
@@ -132,7 +138,6 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
                 ),
                 ElevatedButton(
                   onPressed: () {},
-
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     spacing: SpacingConstants.small,
