@@ -83,4 +83,5 @@ abstract class ThicknessConstans {
 
 abstract class TextConstans {
   static const String orDivider = 'OR';
+  static const String liveSession = 'Live Session';
 }
