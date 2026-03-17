@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/stats/presentation/constants/stats_screen_constants.dart';
 
@@ -26,49 +27,54 @@ class AchievementBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final borderColor =
-        isUnlocked ? color : StatsScreenConstants.badgeBorderLocked;
+        isUnlocked ? color : ColorConstants.dotInactive;
     final iconColor =
-        isUnlocked ? color : StatsScreenConstants.badgeIconLocked;
+        isUnlocked ? color : ColorConstants.iconDisabled;
     final textColor = isUnlocked
-        ? StatsScreenConstants.badgeTextUnlocked
-        : StatsScreenConstants.badgeTextLocked;
+        ? ColorConstants.textDark
+        : ColorConstants.textMuted;
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       spacing: SpacingConstants.small,
       children: [
-        Container(
-          width: StatsScreenConstants.badgeCircleSize,
-          height: StatsScreenConstants.badgeCircleSize,
-          decoration: BoxDecoration(
-            gradient: isUnlocked
-                ? LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: gradientColors,
-                  )
-                : null,
-            color: isUnlocked ? null : StatsScreenConstants.badgeBackgroundLocked,
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: borderColor,
-              width: StatsScreenConstants.badgeBorderWidth,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(
-                    alpha: StatsScreenConstants.badgeShadowOpacity),
-                blurRadius: StatsScreenConstants.badgeShadowBlur,
-                offset: Offset(0, StatsScreenConstants.badgeShadowOffsetY),
+        SizedBox(
+          width: SizeConstants.circleSmall,
+          height: SizeConstants.circleSmall,
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: isUnlocked
+                  ? LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: gradientColors,
+                    )
+                  : null,
+              color:
+                  isUnlocked ? null : ColorConstants.backgroundLightGrey,
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: borderColor,
+                width: ThicknessConstans.small,
               ),
-            ],
-          ),
-          child: Center(
-            child: SvgPicture.asset(
-              iconPath,
-              width: StatsScreenConstants.badgeIconSize,
-              height: StatsScreenConstants.badgeIconSize,
-              colorFilter: ColorFilter.mode(iconColor, BlendMode.srcIn),
+              boxShadow: [
+                BoxShadow(
+                  color: Theme.of(context).shadowColor.withValues(
+                      alpha: StatsScreenConstants.badgeShadowOpacity),
+                  blurRadius: StatsScreenConstants.badgeShadowBlur,
+                  offset:
+                      Offset(0, StatsScreenConstants.badgeShadowOffsetY),
+                ),
+              ],
+            ),
+            child: Center(
+              child: SvgPicture.asset(
+                iconPath,
+                width: IconSizeConstants.x28,
+                height: IconSizeConstants.x28,
+                colorFilter:
+                    ColorFilter.mode(iconColor, BlendMode.srcIn),
+              ),
             ),
           ),
         ),

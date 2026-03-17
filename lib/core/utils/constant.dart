@@ -86,6 +86,7 @@ abstract class IconSizeConstants {
   static const double x32 = 32.0;
   static const double x28 = 28.0;
   static const double x24 = 24.0;
+  static const double x28 = 28.0;
   static const double x18 = 18.0;
   static const double x16 = 16.0;
 }
