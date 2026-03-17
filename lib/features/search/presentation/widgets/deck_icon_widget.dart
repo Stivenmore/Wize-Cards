@@ -19,6 +19,7 @@ class DeckIconWidget extends StatelessWidget {
     required this.icon,
     required this.primary,
     this.size,
+    this.padding,
   });
 
   /// The icon to be displayed inside the circular background.
@@ -30,6 +31,9 @@ class DeckIconWidget extends StatelessWidget {
   /// An optional size for the icon.
   final double? size;
 
+  /// An optional padding for the icon.
+  final EdgeInsetsGeometry? padding;
+
   @override
   Widget build(BuildContext context) {
     final fallbackSurfaceColor = Theme.of(context).colorScheme.surface;
@@ -39,7 +43,7 @@ class DeckIconWidget extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(color: backgroundColor, shape: BoxShape.circle),
       child: Padding(
-        padding: const EdgeInsets.all(SpacingConstants.medium),
+        padding: padding ?? const EdgeInsets.all(SpacingConstants.medium),
         child: Icon(
           icon,
           color: primary,

@@ -92,7 +92,7 @@ abstract class IconSizeConstants {
 
 abstract class ThicknessConstans {
   static const double xs = 1.0;
-  static const double small = 2.0;
+  static const double sm = 2.0;
 }
 
 abstract class TextConstans {
