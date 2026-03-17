@@ -19,6 +19,7 @@ class AppTheme {
       colorScheme: ColorScheme.fromSeed(
         seedColor: ColorConstants.primaryBlue,
         onSurface: ColorConstants.scaffoldBackground,
+        onPrimary: ColorConstants.primaryWhite,
       ),
       shadowColor: primaryColor.withValues(alpha: 0.3),
 
@@ -116,7 +117,7 @@ class AppTheme {
       // Color general para divider
       dividerTheme: DividerThemeData(
         color: dividercolor,
-        thickness: ThicknessConstans.xs
+        thickness: ThicknessConstans.xs,
       ),
 
       // Estilo de tarjetas por defecto (Sombra suave)
@@ -159,6 +160,30 @@ class AppTheme {
           borderRadius: BorderRadius.circular(BorderRadiusConstants.circular),
         ),
         side: BorderSide(color: ColorConstants.borderLightGray),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        hintStyle: const TextStyle(color: ColorConstants.textSecondary),
+        filled: true,
+        fillColor: ColorConstants.primaryWhite,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: SpacingConstants.medium,
+          vertical: SpacingConstants.twelve,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: const BorderSide(color: ColorConstants.borderLightGray),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: const BorderSide(
+            color: ColorConstants.primaryBlue,
+            width: ThicknessConstans.sm,
+          ),
+        ),
       ),
     );
   }

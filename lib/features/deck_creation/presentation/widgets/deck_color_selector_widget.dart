@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/deck_creation/presentation/constants/deck_creation_constants.dart';
 
@@ -71,13 +70,13 @@ class _AnimatedColorCircle extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: ColorConstants.primaryWhite,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     width: ThicknessConstans.sm,
                   ),
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.check,
-                  color: ColorConstants.primaryWhite,
+                  color: Theme.of(context).colorScheme.onPrimary,
                 ),
               ),
             ),

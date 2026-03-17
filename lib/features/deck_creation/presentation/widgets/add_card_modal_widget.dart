@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/presentation/widgets/inputs/ds_text_field.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/deck_creation/presentation/constants/add_card_constants.dart';
 
@@ -98,15 +97,15 @@ class _AddCardModalWidgetState extends State<AddCardModalWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: SpacingConstants.small,
               children: [
-                const Icon(
+                Icon(
                   Icons.add_circle_outline,
-                  color: ColorConstants.primaryWhite,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   size: IconSizeConstants.x24,
                 ),
                 Text(
                   AddCardConstants.addToDeckButton,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: ColorConstants.primaryWhite,
+                    color: Theme.of(context).colorScheme.onPrimary,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

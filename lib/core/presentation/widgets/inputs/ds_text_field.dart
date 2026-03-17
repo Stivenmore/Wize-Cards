@@ -96,9 +96,14 @@ class _DSTextFieldState extends State<DSTextField> {
   @override
   Widget build(BuildContext context) {
     // Colors from requirements: primaryWhite for focus, #F6F6F8 for unfocus.
+    //TODO: Cambiar en black mode
     final backgroundColor = _isFocused
         ? ColorConstants.primaryWhite
         : const Color(0xFFF6F6F8);
+
+    final decorationWithThemeProperties = InputDecoration().applyDefaults(
+      Theme.of(context).inputDecorationTheme,
+    );
 
     return Column(
       spacing: SpacingConstants.small,
@@ -135,32 +140,8 @@ class _DSTextFieldState extends State<DSTextField> {
           keyboardType: widget.keyboardType,
           maxLines: widget.maxLines,
           style: const TextStyle(color: ColorConstants.textPrimary),
-          decoration: InputDecoration(
-            hintText: widget.hintText,
-            hintStyle: const TextStyle(color: ColorConstants.textSecondary),
-            filled: true,
+          decoration: decorationWithThemeProperties.copyWith(
             fillColor: backgroundColor,
-            contentPadding: const EdgeInsets.symmetric(
-              horizontal: SpacingConstants.medium,
-              vertical: SpacingConstants.twelve,
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
-              borderSide: BorderSide.none,
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
-              borderSide: const BorderSide(
-                color: ColorConstants.borderLightGray,
-              ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
-              borderSide: const BorderSide(
-                color: ColorConstants.primaryBlue,
-                width: ThicknessConstans.sm,
-              ),
-            ),
           ),
         ),
       ],

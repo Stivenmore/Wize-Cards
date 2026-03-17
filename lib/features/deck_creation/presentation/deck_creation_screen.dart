@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/presentation/widgets/buttons/ds_text_button_widget.dart';
 import 'package:wize_cards/core/presentation/widgets/inputs/ds_text_field.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/deck_creation/presentation/constants/deck_creation_constants.dart';
 import 'package:wize_cards/features/deck_creation/presentation/widgets/add_card_modal_widget.dart';
@@ -42,17 +41,15 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
-        backgroundColor: ColorConstants.scaffoldBackground,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
           centerTitle: true,
           title: Text(
             DeckCreationConstants.screenTitle,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              color: ColorConstants.textPrimary,
-              fontWeight: FontWeight.bold,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         body: SafeArea(
@@ -75,7 +72,6 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
                       DeckCreationConstants.colorLabel,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.bold,
-                        color: ColorConstants.textPrimary,
                       ),
                     ),
                     DeckColorSelectorWidget(
@@ -91,10 +87,9 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
                 ),
                 Text(
                   '${DeckCreationConstants.addedCardsLabel} (${_cards.length})',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: ColorConstants.textPrimary,
-                  ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 Expanded(
                   child: ListView.builder(
@@ -115,7 +110,7 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
                             text: DeckCreationConstants.addCardButton,
                             style: Theme.of(context).textTheme.bodyLarge
                                 ?.copyWith(
-                                  color: ColorConstants.primaryBlue,
+                                  color: Theme.of(context).colorScheme.primary,
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),
@@ -145,13 +140,13 @@ class _DeckCreationScreenState extends State<DeckCreationScreen> {
                       Text(
                         DeckCreationConstants.createDeckButton,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: ColorConstants.primaryWhite,
+                          color: Theme.of(context).colorScheme.onPrimary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Icon(
+                      Icon(
                         Icons.check,
-                        color: ColorConstants.primaryWhite,
+                        color: Theme.of(context).colorScheme.onPrimary,
                         size: IconSizeConstants.x24,
                       ),
                     ],
