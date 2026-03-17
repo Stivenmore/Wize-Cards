@@ -140,7 +140,7 @@ class AppTheme {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(BorderRadiusConstants.large),
-          side: BorderSide(color: Colors.grey.shade200),
+          side: BorderSide(color: ColorConstants.cardBorder),
         ),
       ),
 
