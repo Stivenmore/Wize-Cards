@@ -175,6 +175,30 @@ class AppTheme {
         ),
         side: BorderSide(color: ColorConstants.borderLightGray),
       ),
+      inputDecorationTheme: InputDecorationTheme(
+        hintStyle: const TextStyle(color: ColorConstants.textSecondary),
+        filled: true,
+        fillColor: ColorConstants.primaryWhite,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: SpacingConstants.medium,
+          vertical: SpacingConstants.twelve,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: const BorderSide(color: ColorConstants.borderLightGray),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: const BorderSide(
+            color: ColorConstants.primaryBlue,
+            width: ThicknessConstans.sm,
+          ),
+        ),
+      ),
     );
   }
 }
