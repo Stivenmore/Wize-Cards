@@ -55,7 +55,7 @@ class AchievementBadge extends StatelessWidget {
               shape: BoxShape.circle,
               border: Border.all(
                 color: borderColor,
-                width: ThicknessConstans.small,
+                width: ThicknessConstans.sm,
               ),
               boxShadow: [
                 BoxShadow(
