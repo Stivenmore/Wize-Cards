@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
+import 'package:wize_cards/features/deck_details/presentation/deck_details_screen.dart';
 import 'package:wize_cards/features/login/presentation/login_screen.dart';
 import 'package:wize_cards/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:wize_cards/features/search/presentation/search_screen.dart';
@@ -24,13 +25,34 @@ class RouteGenerator {
       //  return MaterialPageRoute(builder: (_) => const DecksScreen());
 
       case AppRoutes.deckDetail:
-        // Validación de argumentos para el mazo seleccionado
-        if (args is String) {
-          /*return MaterialPageRoute(
-            builder: (_) => DeckDetailScreen(deckId: args),
-          );*/
-        }
-        return _errorRoute();
+        return MaterialPageRoute(
+          builder: (_) => DeckDetailsScreen(
+            title: "Business English B2",
+            createdBy: "HR Team",
+            description:
+                "Essential vocabulary for international business meetings, negotiations, and formal correspondence.",
+            cardCount: 50,
+            language: "EN-US",
+            lastEdited: DateTime.now().subtract(const Duration(days: 2)),
+            cards: const [
+              CardPreviewData(
+                term: "Stakeholder",
+                definition:
+                    "A person with an interest or concern in something, especially a business.",
+              ),
+              CardPreviewData(
+                term: "ROI (Return on Investment)",
+                definition:
+                    "A performance measure used to evaluate the efficiency of an investment.",
+              ),
+              CardPreviewData(
+                term: "Net Profit",
+                definition:
+                    "The actual profit after working expenses not included in the calculation of gross profit have been paid.",
+              ),
+            ],
+          ),
+        );
 
       case AppRoutes.studyMode:
         if (args is String) {

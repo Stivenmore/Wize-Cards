@@ -12,27 +12,28 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       primaryColor: ColorConstants.primaryBlue,
-      
+
       // Borde de boton
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           minimumSize: const Size(double.infinity, SizeConstants.buttonHeight),
-          side: BorderSide(
-            color: ColorConstants.borderLightGray,
-            width: 1,
-          ),
+          side: BorderSide(color: ColorConstants.borderLightGray, width: 1),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
           ),
         ),
       ),
-  
+
+      dividerColor: ColorConstants.borderLightGray,
       highlightColor: Colors.white,
       scaffoldBackgroundColor: ColorConstants.scaffoldBackground,
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
         seedColor: ColorConstants.primaryBlue,
+        onPrimary: ColorConstants.primaryWhite,
         onSurface: ColorConstants.scaffoldBackground,
+        secondary: ColorConstants.textSecondary,
+        tertiary: ColorConstants.textPrimary,
       ),
       shadowColor: primaryColor.withValues(alpha: 0.3),
 
@@ -130,7 +131,7 @@ class AppTheme {
       // Color general para divider
       dividerTheme: DividerThemeData(
         color: dividercolor,
-        thickness: ThicknessConstans.xs
+        thickness: ThicknessConstans.xs,
       ),
 
       // Estilo de tarjetas por defecto (Sombra suave)
