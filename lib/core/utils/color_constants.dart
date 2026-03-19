@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 abstract class ColorConstants {
   // Primarios
   static const Color primaryWhite = Color(0xFFFFFFFF);
-  static const Color primaryBlue = Color(0xFF1673D0);
+  static const Color primaryBlue = Color(0xFF1152D4);
   static const Color primaryBlueShadow = Color(0xFF3B82F6);
 
   // Texto

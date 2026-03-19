@@ -9,8 +9,21 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  static const bool useGoRouter = true;
+  static final _router = RouteGenerator.generateRouteWithGoRouter();
+
   @override
   Widget build(BuildContext context) {
+    if (useGoRouter) {
+      return MaterialApp.router(
+        title: 'WizeCards',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
+        themeMode: .light,
+        routerConfig: _router,
+      );
+    }
+
     return MaterialApp(
       title: 'WizeCards',
       debugShowCheckedModeBanner: false,

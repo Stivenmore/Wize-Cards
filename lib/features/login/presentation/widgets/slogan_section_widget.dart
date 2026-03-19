@@ -20,15 +20,19 @@ class SloganSectionWidget extends StatelessWidget {
               color: Theme.of(context).shadowColor,
             ),
           ],
+          size: SizeConstants.headerIconButton,
         ),
         Text(
           AppConstants.appName,
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.displayLarge,
           textAlign: TextAlign.center,
         ),
         Text(
           LoginScreenConstants.slogan,
-          style: Theme.of(context).textTheme.labelSmall,
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            fontWeight: FontWeight.w600,
+            color: Theme.of(context).colorScheme.secondary,
+          ),
           textAlign: TextAlign.center,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,

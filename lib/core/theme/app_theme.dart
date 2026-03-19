@@ -17,7 +17,10 @@ class AppTheme {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           minimumSize: const Size(double.infinity, SizeConstants.buttonHeight),
-          side: BorderSide(color: ColorConstants.borderLightGray, width: 1),
+          side: BorderSide(
+            color: const Color.fromARGB(255, 23, 31, 40),
+            width: 1,
+          ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
           ),
@@ -46,6 +49,7 @@ class AppTheme {
           height: 1.2,
           letterSpacing: -1.0,
         ),
+
         // Onboarding titulo: Inter 30px Bold
         headlineLarge: GoogleFonts.inter(
           fontSize: TextSizeConstants.headlineLarge,
@@ -61,7 +65,7 @@ class AppTheme {
           color: Colors.black87,
         ),
         headlineSmall: GoogleFonts.inter(
-          fontSize: 40,
+          fontSize: TextSizeConstants.caption,
           fontWeight: FontWeight.w800,
           color: primaryColor,
         ),
@@ -125,6 +129,11 @@ class AppTheme {
           fontSize: TextSizeConstants.caption,
           fontWeight: FontWeight.w500,
           color: ColorConstants.textSecondary,
+        ),
+        displayLarge: GoogleFonts.inter(
+          fontSize: TextSizeConstants.displayLarge,
+          fontWeight: FontWeight.bold,
+          color: ColorConstants.primaryBlue,
         ),
       ),
 

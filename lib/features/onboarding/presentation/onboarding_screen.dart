@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/onboarding/constants/onboarding_screen_constant.dart';
@@ -33,7 +34,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   void _completeOnboarding() {
     if (!mounted) return;
-    Navigator.pushReplacementNamed(context, AppRoutes.welcome);
+    context.go(AppRoutes.login);
   }
 
   void _onGetStarted() => _completeOnboarding();
