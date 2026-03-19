@@ -1,7 +1,7 @@
 [
   {
     "id": "deck_biz_english_b2",
-    "type": "LANGUAGE",
+    "type": "English",
     "version": 1,
     "is_official": true,
     "config": {
@@ -13,7 +13,7 @@
       "title": "Business English B2",
       "description": "Vocabulario esencial para reuniones, correos y gestión de proyectos internacionales.",
       "author": "Wize Academy",
-      "tags": "english,soft-skills,business",
+      "tags": "English,Soft-skills,Business",
       "accent_color": "#FF9800"
     },
     "cards": [
@@ -67,7 +67,7 @@
       "title": "Advanced Flutter",
       "description": "Preguntas técnicas para entrevistas Senior y arquitectura.",
       "author": "Mobile Guild",
-      "tags": "dev,mobile,hard",
+      "tags": "Dev,Mobile,Hard",
       "accent_color": "#02569B"
     },
     "cards": [
@@ -107,7 +107,7 @@
       "title": "Wizeline Onboarding",
       "description": "Conceptos clave sobre cultura, valores y seguridad de la información.",
       "author": "People Team",
-      "tags": "culture,hr,essential",
+      "tags": "Culture,HR,Essential",
       "accent_color": "#E91E63"
     },
     "cards": [

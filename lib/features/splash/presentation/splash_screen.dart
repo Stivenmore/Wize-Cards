@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wize_cards/core/presentation/widgets/animated_dots_widget.dart';
 import 'package:wize_cards/core/presentation/widgets/icon_app_widget.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
@@ -61,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen>
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 10));
     if (!mounted) return;
-    Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
+    context.push(AppRoutes.onboarding);
   }
 
   @override
