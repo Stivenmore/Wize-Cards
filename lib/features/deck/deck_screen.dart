@@ -122,23 +122,21 @@ class DeckView extends StatelessWidget {
                       );
                     }
 
-                    return Expanded(
-                      child: ListView.builder(
-                        padding: const EdgeInsets.all(SpacingConstants.small),
-                        itemCount: state.filteredDecks.length,
-                        itemBuilder: (context, index) {
-                          final deck = state.filteredDecks[index];
-                          return DeckCardWidget(
-                            title: deck.title,
-                            cardCount: deck.cards.length,
-                            lastStudied: 'Today',
-                            progress: 0.65,
-                            icon: deckIconByTags(deck),
-                            colorByModel: deck.colorHex,
-                            onTap: () {},
-                          );
-                        },
-                      ),
+                    return ListView.builder(
+                      padding: const EdgeInsets.all(SpacingConstants.small),
+                      itemCount: state.filteredDecks.length,
+                      itemBuilder: (context, index) {
+                        final deck = state.filteredDecks[index];
+                        return DeckCardWidget(
+                          title: deck.title,
+                          cardCount: deck.cards.length,
+                          lastStudied: 'Today',
+                          progress: 0.65,
+                          icon: deckIconByTags(deck),
+                          colorByModel: deck.colorHex,
+                          onTap: () {},
+                        );
+                      },
                     );
                   },
                 ),
