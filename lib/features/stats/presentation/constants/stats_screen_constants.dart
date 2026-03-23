@@ -1,5 +1,12 @@
+import 'dart:ui';
+
 /// Constantes especificas del feature de estadisticas.
 abstract class StatsScreenConstants {
+  // --- Trend pill ---
+  static const String trendUpIcon = 'assets/images/icons/trend-up-icon.svg';
+  static const Color trendPositiveColor = Color(0xFF16A34A);
+  static const Color trendPositiveBackground = Color(0xFFF0FDF4);
+
   // --- Shadow del badge (specs unicas de este feature) ---
   static const double badgeShadowBlur = 2.0;
   static const double badgeShadowOffsetY = 1.0;
