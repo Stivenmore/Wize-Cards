@@ -7,6 +7,14 @@ abstract class StatsScreenConstants {
   static const Color trendPositiveColor = Color(0xFF16A34A);
   static const Color trendPositiveBackground = Color(0xFFF0FDF4);
 
+  // --- Weekly bar chart ---
+  static const double chartHeight = 128.0;
+  static const int barMaxActions = 20;
+  static const double barActiveOpacity = 1.0;
+  static const double barFutureOpacity = 0.5;
+  static const double barBackgroundOpacity = 0.1;
+  static const Color dayLabelColor = Color(0xFF94A3B8);
+
   // --- Shadow del badge (specs unicas de este feature) ---
   static const double badgeShadowBlur = 2.0;
   static const double badgeShadowOffsetY = 1.0;
