@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:wize_cards/core/presentation/widgets/botton_tabs_screen.dart';
+import 'package:wize_cards/core/presentation/widgets/custom_bottom_navigation_bar.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
 import 'package:wize_cards/features/deck/deck_screen.dart';
 import 'package:wize_cards/features/deck_details/presentation/deck_details_screen.dart';
@@ -62,7 +62,7 @@ class RouteGenerator {
 
         StatefulShellRoute.indexedStack(
           builder: (_, _, navigationShell) =>
-              BottonTabsScreen(navigationShell: navigationShell),
+              CustomBottomNavigationBar(navigationShell: navigationShell),
           branches: [
             StatefulShellBranch(
               routes: [

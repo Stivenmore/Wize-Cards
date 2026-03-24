@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({super.key});
+  const CustomBottomNavigationBar({super.key, required this.navigationShell});
+
+  final StatefulNavigationShell navigationShell;
 
   @override
   State<CustomBottomNavigationBar> createState() =>
@@ -11,25 +14,23 @@ class CustomBottomNavigationBar extends StatefulWidget {
 }
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
+
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = const [
-    Placeholder(),
-    Placeholder(),
-    Placeholder(),
-    Placeholder(),
-  ];
-
-  void _onItemTapped(int index) {
+  void _onTap(int index) {
     setState(() {
       _selectedIndex = index;
     });
+    widget.navigationShell.goBranch(
+      index,
+      initialLocation: index == widget.navigationShell.currentIndex,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex],
+      body: widget.navigationShell,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // TODO: Handle FAB action
@@ -37,6 +38,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         backgroundColor: Theme.of(context).primaryColor,
         elevation: ElevationConstants.small,
         shape: const CircleBorder(),
+        clipBehavior: Clip.antiAlias,
         child: const Icon(Icons.add, color: ColorConstants.primaryWhite),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
@@ -62,7 +64,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     final isSelected = _selectedIndex == index;
 
     return GestureDetector(
-      onTap: () => _onItemTapped(index),
+      onTap: () => _onTap(index),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
