@@ -1,53 +1,210 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
+import 'package:wize_cards/core/utils/constant.dart';
 
 class AppTheme {
-  static const primaryColor = Color(0xFF1976D2); // Wize Blue
+  static const primaryColor = Color(0xFF1152D4); // Wize Blue
   static const scaffoldBackground = Color(0xFFF5F7FA); // Light Grey
   static const cardBackground = Colors.white; // White for cards
+  static const dividercolor = Color(0xFF8D8D90); // Light grey for divider
 
   static ThemeData get lightTheme {
     return ThemeData(
-      primaryColor: primaryColor,
+      primaryColor: ColorConstants.primaryBlue,
+
+      // Borde de boton
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          minimumSize: const Size(double.infinity, SizeConstants.buttonHeight),
+          side: BorderSide(
+            color: const Color.fromARGB(255, 23, 31, 40),
+            width: 1,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          ),
+        ),
+      ),
+
+      dividerColor: ColorConstants.borderLightGray,
       highlightColor: Colors.white,
+      scaffoldBackgroundColor: ColorConstants.scaffoldBackground,
       useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
-        seedColor: primaryColor,
-        onSurface: scaffoldBackground,
+        seedColor: ColorConstants.primaryBlue,
+        onPrimary: ColorConstants.primaryWhite,
+        onSurface: ColorConstants.scaffoldBackground,
+        secondary: ColorConstants.textSecondary,
+        tertiary: ColorConstants.textPrimary,
       ),
-      // Tipografía global lista
+      shadowColor: primaryColor.withValues(alpha: 0.3),
+
+      // Tipografia global
       textTheme: TextTheme(
+        displayMedium: GoogleFonts.inter(
+          fontSize: TextSizeConstants.displayMedium,
+          fontWeight: FontWeight.w800,
+          color: Colors.white,
+          height: 1.2,
+          letterSpacing: -1.0,
+        ),
+
+        // Onboarding titulo: Inter 30px Bold
+        headlineLarge: GoogleFonts.inter(
+          fontSize: TextSizeConstants.headlineLarge,
+          fontWeight: FontWeight.w700,
+          color: ColorConstants.textPrimary,
+          height: 1.25,
+          letterSpacing: -0.75,
+        ),
+        // Titulo general: Inter 24px Bold
         headlineMedium: GoogleFonts.inter(
-          fontSize: 24,
+          fontSize: TextSizeConstants.headline,
           fontWeight: FontWeight.bold,
           color: Colors.black87,
         ),
-        bodyMedium: GoogleFonts.inter(fontSize: 16, color: Colors.black54),
+        headlineSmall: GoogleFonts.inter(
+          fontSize: TextSizeConstants.caption,
+          fontWeight: FontWeight.w800,
+          color: primaryColor,
+        ),
+        labelSmall: GoogleFonts.inter(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.subtitle,
+        ),
+        bodySmall: GoogleFonts.inter(
+          fontSize: TextSizeConstants.body,
+          fontWeight: FontWeight.w400,
+          color: ColorConstants.textPrimary,
+          wordSpacing: 0.35,
+        ),
+        // Descripcion: Inter 16px Regular
+        bodyMedium: GoogleFonts.inter(
+          fontSize: TextSizeConstants.bodyLarge,
+          fontWeight: FontWeight.w400,
+          color: ColorConstants.textSecondary,
+          height: 1.625,
+        ),
+        // Label: Inter 14px SemiBold (botones, skip)
         labelLarge: GoogleFonts.inter(
-          fontSize: 14,
+          fontSize: TextSizeConstants.body,
           fontWeight: FontWeight.w600,
           color: Colors.white,
         ),
+        // Skip / label secundario: Inter 14px SemiBold
+        labelMedium: GoogleFonts.inter(
+          fontSize: TextSizeConstants.body,
+          fontWeight: FontWeight.w600,
+          color: ColorConstants.textSecondary,
+          height: 1.43,
+          letterSpacing: 0.35,
+        ),
+
+        // Titulo: Inter 24px Bold
+        titleLarge: GoogleFonts.inter(
+          fontSize: TextSizeConstants.headline,
+          fontWeight: FontWeight.w700,
+          color: ColorConstants.textPrimary,
+          letterSpacing: 0.5,
+          height: 15.0 / 24.0,
+        ),
+        // Title Medium: Inter 16px Bold
+        titleMedium: GoogleFonts.inter(
+          fontSize: TextSizeConstants.bodyLarge,
+          fontWeight: FontWeight.w700,
+          color: ColorConstants.textPrimary,
+        ),
+        // Label generico: Inter 13px Bold
+        titleSmall: GoogleFonts.inter(
+          fontSize: 13.0,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0.5,
+          height: 15.0 / 13.0,
+          color: ColorConstants.textPrimary,
+        ),
+        // Display Small: Inter 12px Medium
+        displaySmall: GoogleFonts.inter(
+          fontSize: TextSizeConstants.caption,
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.textSecondary,
+        ),
+        displayLarge: GoogleFonts.inter(
+          fontSize: TextSizeConstants.displayLarge,
+          fontWeight: FontWeight.bold,
+          color: ColorConstants.primaryBlue,
+        ),
+      ),
+
+      // Color general para divider
+      dividerTheme: DividerThemeData(
+        color: dividercolor,
+        thickness: ThicknessConstans.xs,
       ),
 
       // Estilo de tarjetas por defecto (Sombra suave)
       cardTheme: CardThemeData(
         elevation: 0,
-        color: cardBackground,
+        color: ColorConstants.cardBackground,
+        margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-          side: BorderSide(color: Colors.grey.shade200),
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.large),
+          side: BorderSide(color: ColorConstants.cardBorder),
         ),
       ),
 
-      // Estilo de botones
+      // Estilo de botones elevados
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: primaryColor,
+          backgroundColor: ColorConstants.primaryBlue,
           foregroundColor: Colors.white,
-          minimumSize: const Size(double.infinity, 50),
+          minimumSize: const Size(double.infinity, SizeConstants.buttonHeight),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(BorderRadiusConstants.large),
+          ),
+        ),
+      ),
+
+      // Estilo de chips por defecto
+      chipTheme: ChipThemeData(
+        backgroundColor: ColorConstants.primaryWhite,
+        selectedColor: ColorConstants.primaryBlue,
+        secondaryLabelStyle: GoogleFonts.inter(
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.primaryWhite,
+        ),
+        labelStyle: GoogleFonts.inter(
+          fontWeight: FontWeight.w500,
+          color: ColorConstants.textPrimary,
+        ),
+        showCheckmark: false,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.circular),
+        ),
+        side: BorderSide(color: ColorConstants.borderLightGray),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        hintStyle: const TextStyle(color: ColorConstants.textSecondary),
+        filled: true,
+        fillColor: ColorConstants.primaryWhite,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: SpacingConstants.medium,
+          vertical: SpacingConstants.twelve,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: const BorderSide(color: ColorConstants.borderLightGray),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(BorderRadiusConstants.medium),
+          borderSide: const BorderSide(
+            color: ColorConstants.primaryBlue,
+            width: ThicknessConstans.sm,
           ),
         ),
       ),
