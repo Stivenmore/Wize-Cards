@@ -31,17 +31,6 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: widget.navigationShell,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // TODO: Handle FAB action
-        },
-        backgroundColor: Theme.of(context).primaryColor,
-        elevation: ElevationConstants.small,
-        shape: const CircleBorder(),
-        clipBehavior: Clip.antiAlias,
-        child: const Icon(Icons.add, color: ColorConstants.primaryWhite),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: BottomAppBar(
         color: ColorConstants.backgroundNavigationBar,
         child: SizedBox(

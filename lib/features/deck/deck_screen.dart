@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wize_cards/core/presentation/widgets/buttons/ds_circular_icon_button_widget.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/core/utils/icon_deck_by_tags.dart';
 import 'package:wize_cards/features/deck/bloc/deck_bloc.dart';
@@ -28,9 +29,16 @@ class DeckView extends StatelessWidget {
 
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
+        onPressed: () {
+          // TODO: Handle FAB action
+        },
+        backgroundColor: Theme.of(context).primaryColor,
+        elevation: ElevationConstants.small,
+        shape: const CircleBorder(),
+        clipBehavior: Clip.antiAlias,
+        child: const Icon(Icons.add, color: ColorConstants.primaryWhite),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
