@@ -3,8 +3,8 @@ import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/login/presentation/constants/login_screen_constants.dart';
 
-class EmailSignInButton extends StatelessWidget {
-  const EmailSignInButton({
+class GuestSignInButton extends StatelessWidget {
+  const GuestSignInButton({
     super.key,
     required this.onPressed,
     this.horizontalPadding,
@@ -21,12 +21,12 @@ class EmailSignInButton extends StatelessWidget {
       child: OutlinedButton.icon(
         onPressed: onPressed,
         icon: const Icon(
-          Icons.email_outlined,
+          Icons.person_outline,
           color: ColorConstants.blueNavy,
           size: TextSizeConstants.bodyLarge,
         ),
         label: Text(
-          LoginScreenConstants.emailSignInButton,
+          LoginScreenConstants.guestSignInButton,
           style: Theme.of(
             context,
           ).textTheme.labelLarge?.copyWith(color: ColorConstants.blueNavy),
