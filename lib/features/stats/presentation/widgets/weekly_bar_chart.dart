@@ -20,8 +20,6 @@ class WeeklyBarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final maxValue = weeklyData.reduce((a, b) => a > b ? a : b);
-
     return SizedBox(
       height: StatsScreenConstants.chartHeight,
       child: Row(
@@ -30,7 +28,7 @@ class WeeklyBarChart extends StatelessWidget {
           return Expanded(
             child: DayBar(
               value: weeklyData[index],
-              maxValue: maxValue,
+              maxValue: StatsScreenConstants.barMaxActions,
               label: _dayLabels[index],
               isPast: index < currentDayIndex,
               isCurrentDay: index == currentDayIndex,

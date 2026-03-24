@@ -25,7 +25,8 @@ class DayBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fillRatio = maxValue > 0 ? value.toDouble() / maxValue : 0.0;
+    final fillRatio =
+        maxValue > 0 ? (value.toDouble() / maxValue).clamp(0.0, 1.0) : 0.0;
     final barOpacity = isPast || isCurrentDay
         ? StatsScreenConstants.barActiveOpacity
         : StatsScreenConstants.barFutureOpacity;
