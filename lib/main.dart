@@ -3,14 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
 import 'package:wize_cards/core/router/auth_session_notifier.dart';
 import 'package:wize_cards/core/router/route_generator.dart';
 import 'package:wize_cards/core/theme/app_theme.dart';
 import 'package:wize_cards/core/di/injection_container.dart' as di;
 import 'package:wize_cards/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:wize_cards/features/stats/presentation/providers/stats_provider.dart';
+import 'package:wize_cards/features/stats/presentation/bloc/stats_bloc.dart';
 import 'package:wize_cards/firebase_options.dart';
 
 void main() async {
@@ -40,10 +39,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiBlocProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => StatsProvider()),
         BlocProvider<AuthBloc>.value(value: _authBloc),
+        BlocProvider<StatsBloc>(create: (_) => StatsBloc()),
       ],
       child: useGoRouter
           ? MaterialApp.router(
