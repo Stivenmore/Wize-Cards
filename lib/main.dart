@@ -43,28 +43,24 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => StatsProvider()),
+        BlocProvider<AuthBloc>.value(value: _authBloc),
       ],
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider<AuthBloc>.value(value: _authBloc),
-        ],
-        child: useGoRouter
-            ? MaterialApp.router(
-                title: 'WizeCards',
-                debugShowCheckedModeBanner: false,
-                theme: AppTheme.lightTheme,
-                themeMode: ThemeMode.light,
-                routerConfig: _router,
-              )
-            : MaterialApp(
-                title: 'WizeCards',
-                debugShowCheckedModeBanner: false,
-                theme: AppTheme.lightTheme,
-                themeMode: ThemeMode.light,
-                initialRoute: AppRoutes.splash,
-                onGenerateRoute: RouteGenerator.generateRoute,
-              ),
-      ),
+      child: useGoRouter
+          ? MaterialApp.router(
+              title: 'WizeCards',
+              debugShowCheckedModeBanner: false,
+              theme: AppTheme.lightTheme,
+              themeMode: ThemeMode.light,
+              routerConfig: _router,
+            )
+          : MaterialApp(
+              title: 'WizeCards',
+              debugShowCheckedModeBanner: false,
+              theme: AppTheme.lightTheme,
+              themeMode: ThemeMode.light,
+              initialRoute: AppRoutes.splash,
+              onGenerateRoute: RouteGenerator.generateRoute,
+            ),
     );
   }
 }
