@@ -7,6 +7,7 @@ import 'package:wize_cards/core/utils/icon_deck_by_tags.dart';
 import 'package:wize_cards/features/deck/bloc/deck_bloc.dart';
 import 'package:wize_cards/features/deck/constanst/deck_screen_constant.dart';
 import 'package:wize_cards/features/deck/widgets/deck_card_widget.dart';
+import 'package:wize_cards/features/deck/widgets/deck_shimmer_widget.dart';
 
 class DeckScreen extends StatelessWidget {
   const DeckScreen({super.key});
@@ -117,7 +118,7 @@ class DeckView extends StatelessWidget {
                 child: BlocBuilder<DeckBloc, DeckState>(
                   builder: (context, state) {
                     if (state.status == DeckStatus.loading) {
-                      return const Center(child: CircularProgressIndicator());
+                      return const Center(child: DeckShimmerWidget());
                     }
 
                     if (state.status == DeckStatus.failure) {
