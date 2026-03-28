@@ -35,4 +35,8 @@ abstract class ColorConstants {
   static const Color iconNotSelected = Color(0xFF94A3B8);
   static const Color textMuted = Color(0xFF94A3B8);
   static const Color textDark = Color(0xFF334155);
+
+  // Animaciones
+  static const Color baseLoading = Color(0xFFE0E0E0);
+  static const Color highlightLoading = Color(0xFFF5F5F5);
 }
