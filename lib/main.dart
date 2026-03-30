@@ -1,35 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
+import 'package:wize_cards/core/router/auth_session_notifier.dart';
 import 'package:wize_cards/core/router/route_generator.dart';
 import 'package:wize_cards/core/theme/app_theme.dart';
 import 'package:wize_cards/core/di/injection_container.dart' as di;
 import 'package:wize_cards/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:wize_cards/features/auth/presentation/bloc/auth_event.dart';
 import 'package:wize_cards/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await di.init();
-  runApp(const MyApp());
+
+  final authBloc = di.sl<AuthBloc>();
+  final authSessionNotifier = AuthSessionNotifier(
+    firebaseAuth: FirebaseAuth.instance,
+  );
+
+  runApp(MyApp(authBloc: authBloc, authSessionNotifier: authSessionNotifier));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({
+    super.key,
+    required AuthBloc authBloc,
+    required AuthSessionNotifier authSessionNotifier,
+  }) : _authBloc = authBloc,
+       _router = RouteGenerator.generateRouteWithGoRouter(authSessionNotifier);
 
   static const bool useGoRouter = true;
-  static final _router = RouteGenerator.generateRouteWithGoRouter();
+  final AuthBloc _authBloc;
+  final GoRouter _router;
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<AuthBloc>(
-          create: (_) => di.sl<AuthBloc>()..add(AuthCheckRequested()),
-        ),
-      ],
+        BlocProvider<AuthBloc>.value(value: _authBloc)
+        ],
       child: useGoRouter
           ? MaterialApp.router(
               title: 'WizeCards',

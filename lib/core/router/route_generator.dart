@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:wize_cards/core/presentation/widgets/botton_tabs_screen.dart';
+import 'package:wize_cards/core/presentation/widgets/custom_bottom_navigation_bar.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
+import 'package:wize_cards/core/router/auth_session_notifier.dart';
 import 'package:wize_cards/features/deck/deck_screen.dart';
 import 'package:wize_cards/features/deck_details/presentation/deck_details_screen.dart';
 import 'package:wize_cards/features/deck_creation/presentation/deck_creation_screen.dart';
@@ -11,9 +12,47 @@ import 'package:wize_cards/features/search/presentation/search_screen.dart';
 import 'package:wize_cards/features/splash/presentation/splash_screen.dart';
 
 class RouteGenerator {
-  static GoRouter generateRouteWithGoRouter() {
+  static GoRouter generateRouteWithGoRouter(
+    AuthSessionNotifier authSessionNotifier,
+  ) {
     return GoRouter(
       initialLocation: AppRoutes.splash,
+      refreshListenable: authSessionNotifier,
+      redirect: (context, state) {
+        final location = state.matchedLocation;
+
+        final isSplash = location == AppRoutes.splash;
+        final isPublicRoute =
+            isSplash ||
+            location == AppRoutes.onboarding ||
+            location == AppRoutes.login;
+
+        if (!authSessionNotifier.isInitialized) {
+          return null;
+        }
+
+        final isAuthenticated = authSessionNotifier.isAuthenticated;
+
+        // Splash remains presentation-only; it transitions to onboarding.
+        // From there, the router guard decides whether to continue or jump.
+        if (isSplash) {
+          return null;
+        }
+
+        if (isAuthenticated &&
+            (location == AppRoutes.onboarding || location == AppRoutes.login)) {
+          return AppRoutes.decks;
+        }
+
+        // NOTE: Intentionally unchanged in this task:
+        // unauthenticated users continue going through onboarding.
+        // Any "show onboarding only once" logic will be handled in a separate task.
+        if (!isAuthenticated && !isPublicRoute) {
+          return AppRoutes.onboarding;
+        }
+
+        return null;
+      },
       routes: [
         GoRoute(
           path: AppRoutes.splash,
@@ -62,7 +101,7 @@ class RouteGenerator {
 
         StatefulShellRoute.indexedStack(
           builder: (_, _, navigationShell) =>
-              BottonTabsScreen(navigationShell: navigationShell),
+              CustomBottomNavigationBar(navigationShell: navigationShell),
           branches: [
             StatefulShellBranch(
               routes: [
