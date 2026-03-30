@@ -12,6 +12,8 @@ abstract class DeckScreenConstants {
       "No decks found for the selected filter.";
   static const String cards = "cards";
   static const String lastStudied = "Last studied";
+  static const String sessionStateTitle = "Business Terms";
+  static const String progress = "Progress";
 
   static const double sizeCard = 92.0;
 }

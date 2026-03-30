@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 
-class TitleSesionStateWdiget extends StatelessWidget {
+class TitleSesionStateWidget extends StatelessWidget {
   final String title;
 
-  const TitleSesionStateWdiget({super.key, required this.title});
+  const TitleSesionStateWidget({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,10 @@ class TitleSesionStateWdiget extends StatelessWidget {
                 ),
               ),
             ),
-            Text(TextConstans.liveSession, 
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                fontSize: TextSizeConstants.caption
+            Text(
+              TextConstans.liveSession,
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                fontSize: TextSizeConstants.caption,
               ),
             ),
           ],
