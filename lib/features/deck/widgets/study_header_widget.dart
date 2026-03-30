@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wize_cards/core/presentation/widgets/buttons/ds_circular_icon_button_widget.dart';
+import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/features/deck/constanst/deck_screen_constant.dart';
 import 'package:wize_cards/features/deck/widgets/title_sesion_state_widget.dart';
@@ -38,7 +39,7 @@ class StudyHeaderWidget extends StatelessWidget {
                 onPressed: onSettingsPressed,
                 icon: Icons.settings_outlined,
                 primary: theme.colorScheme.primary,
-                backgroundColor: Colors.white,
+                backgroundColor: ColorConstants.primaryWhite,
               ),
             ],
           ),
@@ -65,7 +66,7 @@ class StudyHeaderWidget extends StatelessWidget {
                      style: theme.textTheme.bodySmall?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: TextSizeConstants.body,
-                      color: Colors.blue
+                      color: ColorConstants.primaryBlue
                       ),
                     ),
                 ],
@@ -77,7 +78,7 @@ class StudyHeaderWidget extends StatelessWidget {
                 minHeight: ThicknessConstans.md,
                 value: normalizedProgress,
                 backgroundColor: theme.shadowColor,
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                valueColor: AlwaysStoppedAnimation<Color>(ColorConstants.primaryBlue),
                 borderRadius: BorderRadius.circular(
                   BorderRadiusConstants.large,
                 ),
