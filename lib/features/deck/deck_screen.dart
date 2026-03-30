@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wize_cards/core/presentation/widgets/buttons/ds_circular_icon_button_widget.dart';
-import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/core/utils/icon_deck_by_tags.dart';
 import 'package:wize_cards/features/deck/bloc/deck_bloc.dart';
 import 'package:wize_cards/features/deck/constanst/deck_screen_constant.dart';
 import 'package:wize_cards/features/deck/widgets/deck_card_widget.dart';
-import 'package:wize_cards/features/deck/widgets/deck_shimmer_widget.dart';
 
 class DeckScreen extends StatelessWidget {
   const DeckScreen({super.key});
@@ -30,16 +28,9 @@ class DeckView extends StatelessWidget {
 
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // TODO: Handle FAB action
-        },
-        backgroundColor: Theme.of(context).primaryColor,
-        elevation: ElevationConstants.small,
-        shape: const CircleBorder(),
-        clipBehavior: Clip.antiAlias,
-        child: const Icon(Icons.add, color: ColorConstants.primaryWhite),
+        onPressed: () {},
+        child: const Icon(Icons.add),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
@@ -118,7 +109,7 @@ class DeckView extends StatelessWidget {
                 child: BlocBuilder<DeckBloc, DeckState>(
                   builder: (context, state) {
                     if (state.status == DeckStatus.loading) {
-                      return const Center(child: DeckShimmerWidget());
+                      return const Center(child: CircularProgressIndicator());
                     }
 
                     if (state.status == DeckStatus.failure) {

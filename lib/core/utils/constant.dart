@@ -60,7 +60,6 @@ abstract class SizeConstants {
   static const double pillHeight = 30.0;
   static const double cardHeight = 144.0;
   static const double cardSize = 48.0;
-  static const double navigationBarSize = 60.0;
 }
 
 abstract class AnimationConstants {
@@ -103,12 +102,4 @@ abstract class ThicknessConstans {
 abstract class TextConstans {
   static const String orDivider = 'OR';
   static const String liveSession = 'Live Session';
-  static const String decks = 'Decks';
-  static const String discover = 'Discover';
-  static const String stats = 'Stats';
-  static const String profile = 'Profile';
-}
-
-abstract class ElevationConstants {
-  static const double small = 6.0;
 }
