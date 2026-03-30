@@ -27,16 +27,10 @@ abstract class ColorConstants {
   static const Color scaffoldBackground = Color(0xFFF5F7FA);
   static const Color cardBackground = Colors.white;
   static const Color backgroundLightGrey = Color(0xFFF8FAFC);
-  static const Color backgroundNavigationBar = Color(0xFFF1F5F9);
   static const Color cardBorder = Color(0xFFF1F5F9);
 
   // Estados deshabilitados/locked
   static const Color iconDisabled = Color(0xFFCBD5E1);
-  static const Color iconNotSelected = Color(0xFF94A3B8);
   static const Color textMuted = Color(0xFF94A3B8);
   static const Color textDark = Color(0xFF334155);
-
-  // Animaciones
-  static const Color baseLoading = Color(0xFFE0E0E0);
-  static const Color highlightLoading = Color(0xFFF5F5F5);
 }

@@ -55,11 +55,14 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   /// Waits for the splash delay and navigates to the next screen.
+  ///
+  /// Currently always routes to [AppRoutes.onboarding].
+  /// TODO: Verificar hasSeenOnboarding con SharedPreferences
+  /// para decidir si ir a onboarding o login.
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 10));
-
     if (!mounted) return;
-    context.go(AppRoutes.onboarding);
+    context.push(AppRoutes.onboarding);
   }
 
   @override
