@@ -64,7 +64,6 @@ class _SplashScreenState extends State<SplashScreen>
   /// Waits for the splash delay and checks onboarding status via BLoC.
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 10));
-
     if (!mounted) return;
 
     _onboardingBloc.add(OnboardingCheckRequested());
