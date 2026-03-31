@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:wize_cards/core/di/injection_container.dart' as di;
 import 'package:wize_cards/core/presentation/widgets/animated_dots_widget.dart';
 import 'package:wize_cards/core/presentation/widgets/icon_app_widget.dart';
 import 'package:wize_cards/core/router/app_routes.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
+import 'package:wize_cards/features/onboarding/presentation/bloc/onboarding_bloc.dart';
+import 'package:wize_cards/features/onboarding/presentation/bloc/onboarding_event.dart';
+import 'package:wize_cards/features/onboarding/presentation/bloc/onboarding_state.dart';
 import 'package:wize_cards/features/splash/presentation/constants/splash_screen_constants.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,10 +29,13 @@ class _SplashScreenState extends State<SplashScreen>
   /// Drives a subtle upward slide of the splash body on entry.
   late final Animation<Offset> _slideAnimation;
 
+  late final OnboardingBloc _onboardingBloc;
+
   @override
   void initState() {
     super.initState();
 
+    _onboardingBloc = di.sl<OnboardingBloc>();
     _initAnimations();
     _navigateToNextScreen();
   }
@@ -54,15 +61,25 @@ class _SplashScreenState extends State<SplashScreen>
     _controller.forward();
   }
 
-  /// Waits for the splash delay and navigates to the next screen.
-  ///
-  /// Currently always routes to [AppRoutes.onboarding].
-  /// TODO: Verificar hasSeenOnboarding con SharedPreferences
-  /// para decidir si ir a onboarding o login.
+  /// Waits for the splash delay and checks onboarding status via BLoC.
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 10));
     if (!mounted) return;
-    context.push(AppRoutes.onboarding);
+
+    _onboardingBloc.add(OnboardingCheckRequested());
+
+    await _onboardingBloc.stream.firstWhere(
+      (state) => state is OnboardingRequired || state is OnboardingDone,
+    );
+
+    if (!mounted) return;
+
+    final state = _onboardingBloc.state;
+    if (state is OnboardingDone) {
+      context.go(AppRoutes.login);
+    } else {
+      context.go(AppRoutes.onboarding);
+    }
   }
 
   @override

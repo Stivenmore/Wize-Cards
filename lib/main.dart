@@ -6,7 +6,7 @@ import 'package:wize_cards/core/router/route_generator.dart';
 import 'package:wize_cards/core/theme/app_theme.dart';
 import 'package:wize_cards/core/di/injection_container.dart' as di;
 import 'package:wize_cards/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:wize_cards/features/auth/presentation/bloc/auth_event.dart';
+import 'package:wize_cards/features/stats/presentation/bloc/stats_bloc.dart';
 import 'package:wize_cards/firebase_options.dart';
 
 void main() async {
@@ -26,9 +26,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<AuthBloc>(
-          create: (_) => di.sl<AuthBloc>()..add(AuthCheckRequested()),
-        ),
+        BlocProvider<AuthBloc>.value(value: _authBloc),
+        BlocProvider<StatsBloc>(create: (_) => StatsBloc()),
       ],
       child: useGoRouter
           ? MaterialApp.router(
