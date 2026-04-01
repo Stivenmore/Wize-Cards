@@ -20,9 +20,11 @@ class WeeklyBarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: StatsScreenConstants.chartHeight,
-      child: Row(
+    return Padding(
+      padding: const EdgeInsets.only(top: StatsScreenConstants.chartInternalTopPadding),
+      child: SizedBox(
+        height: StatsScreenConstants.chartHeight,
+        child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: List.generate(weeklyData.length, (index) {
           return Expanded(
@@ -35,6 +37,7 @@ class WeeklyBarChart extends StatelessWidget {
             ),
           );
         }),
+        ),
       ),
     );
   }
