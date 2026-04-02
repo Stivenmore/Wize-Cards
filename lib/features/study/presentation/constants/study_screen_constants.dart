@@ -25,6 +25,10 @@ abstract class StudyScreenConstants {
   static const String volumeHighIcon = 'assets/images/icons/volume-high.svg';
   static const String touchIcon = 'assets/images/icons/touch-icon.svg';
 
+  // --- Barra de progreso ---
+  static const double progressBarHeight = 6.0;
+
   // --- Textos ---
   static const String tapToFlipLabel = 'TAP TO FLIP';
+  static const String progressLabel = 'Progress';
 }
