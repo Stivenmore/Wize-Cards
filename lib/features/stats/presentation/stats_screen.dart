@@ -13,21 +13,22 @@ import 'package:wize_cards/features/stats/presentation/widgets/weekly_bar_chart.
 
 /// Organismo: Pantalla principal de estadisticas "My Progress".
 ///
-/// Ensambla todos los componentes de stats en una vista scrolleable
-/// conectada al StatsBloc.
-class StatsScreen extends StatefulWidget {
+/// Provee el StatsBloc al arbol de widgets y dispara el evento inicial
+/// de carga. El bloc vive solo mientras la pantalla este activa.
+class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
 
   @override
-  State<StatsScreen> createState() => _StatsScreenState();
+  Widget build(BuildContext context) {
+    return BlocProvider<StatsBloc>(
+      create: (_) => StatsBloc()..add(StatsLoadRequested()),
+      child: const StatsView(),
+    );
+  }
 }
 
-class _StatsScreenState extends State<StatsScreen> {
-  @override
-  void initState() {
-    super.initState();
-    context.read<StatsBloc>().add(StatsLoadRequested());
-  }
+class StatsView extends StatelessWidget {
+  const StatsView({super.key});
 
   @override
   Widget build(BuildContext context) {
