@@ -7,6 +7,10 @@ abstract class StatsScreenConstants {
   static const Color trendPositiveColor = Color(0xFF16A34A);
   static const Color trendPositiveBackground = Color(0xFFF0FDF4);
 
+  // --- Spacing de la pantalla ---
+  static const double chartToCardsSpacing = 35.0;
+  static const double chartInternalTopPadding = 40.0;
+
   // --- Weekly bar chart ---
   static const double chartHeight = 128.0;
   static const int barMaxActions = 20;
@@ -31,4 +35,16 @@ abstract class StatsScreenConstants {
   // --- Tipografia de la stat card ---
   static const double statCardNumberLetterSpacing = -0.9;
   static const double statCardNumberLineHeight = 40.0;
+
+  // --- Colores de iconos de stat cards ---
+  static const Color fireIconColor = Color(0xFFF97316);
+
+  // --- Textos ---
+  static const String myProgressLabel = 'My Progress';
+  static const String weeklyActivityLabel = 'Weekly Activity';
+  static const String actionsLabel = 'actions';
+  static const String recentBadgesLabel = 'Recent Badges';
+  static const String viewAllLabel = 'View All';
+  static const String cardsCollectedLabel = 'Cards Collected';
+  static const String dayStreakLabel = 'Day Streak';
 }
