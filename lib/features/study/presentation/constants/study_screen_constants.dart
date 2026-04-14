@@ -9,6 +9,9 @@ abstract class StudyScreenConstants {
   static const Color flashcardCategory = Color(0xFFA3A3A3);
   static const Color flashcardHint = Color(0xFFC7C3C3);
   static const Color volumeIconBackground = Color(0xFFEDEDED);
+  static const Color gotItButton = Color(0xFF22C55E);
+  static const Color missedButton = Color(0xFFEF4444);
+  static const Color undoButton = Color(0xFF94A3B8);
 
   // --- Tamanios ---
   static const double badgeRadius = 4.0;
@@ -27,4 +30,8 @@ abstract class StudyScreenConstants {
 
   // --- Textos ---
   static const String tapToFlipLabel = 'TAP TO FLIP';
+  static const String gotItLabel = "Got it";
+  static const String missedLabel = "Missed";
+  static const String undoLabel = "Undo";
+  static const String noCardsMessage = "No hay cartas disponibles";
 }

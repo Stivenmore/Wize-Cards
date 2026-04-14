@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wize_cards/core/presentation/widgets/buttons/ds_circular_icon_button_widget.dart';
+import 'package:wize_cards/core/router/app_routes.dart';
 import 'package:wize_cards/core/utils/color_constants.dart';
 import 'package:wize_cards/core/utils/constant.dart';
 import 'package:wize_cards/core/utils/icon_deck_by_tags.dart';
@@ -143,7 +145,13 @@ class DeckView extends StatelessWidget {
                           progress: 0.65,
                           icon: deckIconByTags(deck),
                           colorByModel: deck.colorHex,
-                          onTap: () {},
+                          onTap: () {
+                            context.go(
+                              '${AppRoutes.studyMode}/${deck.id}',
+                              extra: deck,
+                            );
+                            // context.push('${AppRoutes.studyMode}/${deck.id}');
+                          },
                         );
                       },
                     );

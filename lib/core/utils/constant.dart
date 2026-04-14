@@ -61,6 +61,8 @@ abstract class SizeConstants {
   static const double cardHeight = 144.0;
   static const double cardSize = 48.0;
   static const double navigationBarSize = 60.0;
+  static const double deckHeaderSize = 100.0;
+  static const double deckButtonsHeight = 200.00;
 }
 
 abstract class AnimationConstants {

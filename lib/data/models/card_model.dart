@@ -3,12 +3,14 @@ class CardModel {
   final String front;
   final String back;
   final String type; // TEXT, CODE
+  final String hint;
 
   CardModel({
     required this.id,
     required this.front,
     required this.back,
     required this.type,
+    required this.hint,
   });
 
   factory CardModel.fromJson(Map<String, dynamic> json) {
@@ -17,6 +19,7 @@ class CardModel {
       front: json['front'] ?? '',
       back: json['back'] ?? '',
       type: json['type'] ?? 'TEXT',
+      hint: json['hint'] ?? '',
     );
   }
 

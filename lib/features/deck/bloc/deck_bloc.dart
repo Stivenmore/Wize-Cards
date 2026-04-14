@@ -15,6 +15,7 @@ enum DeckStatus { initial, loading, success, failure }
 class DeckBloc extends Bloc<DeckEvent, DeckState> {
   DeckBloc() : super(DeckState.initial()) {
     on<DeckRequestedEvent>(_onDeckRequested);
+    on<DeckByIdEvent>(_onDeckById);
     on<DeckFilterChangeEvent>(_onDeckFilterChange);
     on<DeckRefreshEvent>(_onDeckRefresh);
   }
@@ -43,6 +44,38 @@ class DeckBloc extends Bloc<DeckEvent, DeckState> {
           status: DeckStatus.success,
           allDecks: fetchedDecks,
           filteredDecks: fetchedDecks,
+          errorMessage: null,
+        ),
+      );
+    } catch (e) {
+      emit(
+        state.copyWith(
+          status: DeckStatus.failure,
+          errorMessage: 'Failed to load decks',
+        ),
+      );
+    }
+  }
+
+  Future<void> _onDeckById(DeckByIdEvent event, Emitter<DeckState> emit) async {
+    emit(state.copyWith(status: DeckStatus.loading));
+    try {
+      final jsonString = await rootBundle.loadString(
+        'assets/data/initial_decks.json',
+      );
+
+      final List<dynamic> jsonList = json.decode(jsonString);
+
+      final fetchedDecks = jsonList
+          .map((json) => DeckModel.fromJson(json as Map<String, dynamic>))
+          .toList();
+
+      final deck = fetchedDecks.firstWhere((deck) => deck.id == event.deckId);
+      emit(
+        state.copyWith(
+          status: DeckStatus.success,
+          allDecks: [deck],
+          filteredDecks: [deck],
           errorMessage: null,
         ),
       );

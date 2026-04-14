@@ -10,6 +10,7 @@ import 'package:wize_cards/features/login/presentation/login_screen.dart';
 import 'package:wize_cards/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:wize_cards/features/search/presentation/search_screen.dart';
 import 'package:wize_cards/features/splash/presentation/splash_screen.dart';
+import 'package:wize_cards/features/study/presentation/study_mode_screen.dart';
 
 class RouteGenerator {
   static GoRouter generateRouteWithGoRouter(
@@ -88,14 +89,7 @@ class RouteGenerator {
                 message: 'Study mode requiere deckId válido.',
               );
             }
-
-            /*
             return StudyModeScreen(deckId: deckId);
-            */
-
-            return _errorScreen(
-              message: 'Study mode aún no está implementado.',
-            );
           },
         ),
 

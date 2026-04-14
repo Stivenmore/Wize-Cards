@@ -9,6 +9,12 @@ final class DeckRequestedEvent extends DeckEvent {
   const DeckRequestedEvent();
 }
 
+final class DeckByIdEvent extends DeckEvent {
+  const DeckByIdEvent(this.deckId);
+
+  final String deckId;
+}
+
 final class DeckFilterChangeEvent extends DeckEvent {
   const DeckFilterChangeEvent(this.filter);
 
