@@ -29,7 +29,6 @@ class _StudyModeScreenState extends State<StudyModeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return BlocProvider(
       create: (context) => DeckBloc()..add(DeckByIdEvent(widget.deckId)),
       child: Scaffold(
